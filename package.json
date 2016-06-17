@@ -1,0 +1,40 @@
+{
+  "name": "danielramosacosta",
+  "version": "1.0.0",
+  "description": "Página Github de usuario",
+  "main": "src/js/client.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielRamosAcosta/DanielRamosAcosta.github.io.git"
+  },
+  "keywords": [
+    "Página",
+    "Usuario"
+  ],
+  "author": "Daniel Ramos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielRamosAcosta/DanielRamosAcosta.github.io/issues"
+  },
+  "homepage": "https://github.com/DanielRamosAcosta/DanielRamosAcosta.github.io#readme",
+  "dependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "flux": "^2.1.1",
+    "history": "^3.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
