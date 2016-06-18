@@ -4,6 +4,10 @@ const gulp = require('gulp')
 const spawn = require('child_process').spawn
 const del = require('del')
 
+// Requerirlo para que salte el error si no se hizo npm install
+require('webpack')
+require('webpack-dev-server')
+
 gulp.task('build', ['clean'], (cb) => {
   spawn('node', [
     './node_modules/.bin/webpack',
