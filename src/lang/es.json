@@ -1,0 +1,21 @@
+{
+  "page": {
+    "home": "Inicio",
+    "studies": "Estudios",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "home": {
+    "student": "Estudiante de ",
+    "degree": "Ingeniería Informática",
+    "student2": "",
+    "ihave": "Tengo ",
+    "description": " años, y actualmente soy estudiante 3º del grado de Ingeniería Informática en la ESIT de la Universidad de La Laguna.",
+    "description2": "Actualmente, lo que más hago es desarrollo de front-end para mi uso personal, así como algunas pequeñas herramientas para automatizar tareas (como scripts en ruby)"
+  },
+  "footer": {
+    "connect": "Conecta"
+  }
+}

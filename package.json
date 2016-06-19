@@ -45,6 +45,8 @@
     "gulp": "^3.9.1",
     "history": "^3.0.0",
     "html-webpack-plugin": "^2.21.0",
+    "json-loader": "^0.5.4",
+    "lockr": "^0.8.4",
     "materialize-sass-origin": "^0.97.5",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.9.1",

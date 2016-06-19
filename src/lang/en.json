@@ -1,0 +1,21 @@
+{
+  "page": {
+    "home": "Home",
+    "studies": "Studies",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "home": {
+    "student": "",
+    "degree": "Computer Engineering",
+    "student2": " student",
+    "ihave": "I'm ",
+    "description": " years old, and I'm studing 3rd year of Computer Engineering degree at ESIT in Universidad de La Laguna",
+    "description2": "Right now, the most I do is front-end development for myself and some other little tools to automate tasks (like ruby scripts)."
+  },
+  "footer": {
+    "connect": "Connect"
+  }
+}
