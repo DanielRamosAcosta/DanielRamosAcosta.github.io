@@ -13,13 +13,13 @@ const sassLoaders = [
 
 let commonPlugins = [
   new ExtractTextPlugin('main.css'),
-  new HtmlWebpackPlugin({template: 'index.html'})
+  new HtmlWebpackPlugin({template: 'index.tpl.html'})
 ]
 
 module.exports = {
-  context: path.join(__dirname, '/src'),
+  context: path.join(__dirname, '/app'),
   devtool: debug ? 'inline-sourcemap' : null,
-  entry: './scripts/client.js',
+  entry: './main.jsx',
   module: {
     loaders: [
       {
@@ -60,7 +60,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.sass'],
+    extensions: ['', '.js', '.jsx', '.sass'],
     root: [path.join(__dirname, './src')]
   }
 }

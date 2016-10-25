@@ -1,19 +1,21 @@
 import React from 'react'
 
-import Nav from '../components/layout/Nav.js'
-import Footer from '../components/layout/Footer.js'
+import Navbar from './Layout/Navbar'
+import Footer from './Layout/Footer'
 import EasyTransition from 'react-easy-transition'
 
-import es from '../../lang/es.json'
-import en from '../../lang/en.json'
+import style from '../styles/Layout'
 
 export default class Layout extends React.Component {
   render () {
     const { location } = this.props;
+
+    console.log(style.Layout)
+
     return (
       <div>
-        <Nav location={location} />
-        <div class="container main">
+        <Navbar location={location} />
+        <div class="container main" style={style.Layout}>
           <EasyTransition
               path={location.pathname}
               initialStyle={{opacity: 0}}
