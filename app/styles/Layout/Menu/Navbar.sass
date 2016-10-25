@@ -1,0 +1,16 @@
+@import "../../_variables"
+
+$min-size-navbar: 850px
+
+.Navbar
+  .Tab
+    padding-left: 2em !important
+    padding-right: 2em !important
+
+  @media screen and (min-width: $min-size-navbar)
+    .ButtonSidebar
+      display: none !important
+
+  @media screen and (max-width: $min-size-navbar)
+    .Tabs
+      display: none

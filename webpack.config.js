@@ -61,7 +61,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: 'style-loader!css-loader?modules'
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -85,5 +85,9 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx', '.sass'],
     root: [path.join(__dirname, './app')]
+  },
+  devServer: {
+    inline: true,
+    hot: true
   }
 };
