@@ -3,33 +3,39 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
-  debug: true,
-  devtool: 'inline-sourcemap',
   entry: [
     path.join(__dirname, 'app/main.jsx')
   ],
   output: {
-    path: path.join(__dirname, '/dist/'),
-    filename: '[name].js',
+    path: path.join(__dirname, 'dist/'),
+    filename: '[name]-[hash].min.js',
     publicPath: '/'
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: 'app/index.tpl.html',
       inject: 'body',
       filename: 'index.html'
     }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+    new ExtractTextPlugin('[name]-[hash].min.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+        screw_ie8: true
+      }
     }),
-    new ExtractTextPlugin('main.css')
+    new StatsPlugin('webpack.stats.json', {
+      source: false,
+      modules: false
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    })
   ],
   module: {
     loaders: [
@@ -78,9 +84,7 @@ module.exports = {
     ]
   },
   postcss: [
-    autoprefixer({
-      browsers: ['last 2 versions']
-    })
+    require('autoprefixer')
   ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.sass'],
