@@ -5,13 +5,13 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
-import GithubIcon from '../Icons/Github.jsx';
-import FacebookIcon from '../Icons/Facebook.jsx';
-import LinkedInIcon from '../Icons/LinkedIn.jsx';
-import TwitterIcon from '../Icons/Twitter.jsx';
+import GithubIcon from 'components/Icons/Github.jsx';
+import FacebookIcon from 'components/Icons/Facebook.jsx';
+import LinkedInIcon from 'components/Icons/LinkedIn.jsx';
+import TwitterIcon from 'components/Icons/Twitter.jsx';
 import SvgIcon from 'material-ui/SvgIcon';
 
-import '../../styles/Home/Perfil'
+import 'styles/Home/Perfil'
 
 export default class Experience extends React.Component {
   render () {

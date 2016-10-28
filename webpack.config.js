@@ -5,6 +5,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+// Import the plugin:
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   debug: true,
@@ -29,7 +31,12 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
-    new ExtractTextPlugin('main.css')
+    new ExtractTextPlugin('main.css'),
+    new webpack.DefinePlugin({
+      PRODUCTION: false,
+      DEVELOPMENT: true
+    }),
+    new DashboardPlugin()
   ],
   module: {
     loaders: [
@@ -84,7 +91,12 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.sass'],
-    root: [path.join(__dirname, './app')]
+    root: [path.join(__dirname, './app')],
+    alias: {
+      styles: path.resolve(__dirname, 'app', 'styles'),
+      components: path.resolve(__dirname, 'app', 'components'),
+      reducers: path.resolve(__dirname, 'app', 'reducers'),
+    }
   },
   devServer: {
     inline: true,

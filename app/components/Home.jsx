@@ -12,7 +12,7 @@ import SvgIcon from 'material-ui/SvgIcon';
 
 import Perfil from './Home/Perfil'
 
-import '../styles/Home'
+import 'styles/Home'
 
 const CardExampleWithAvatar2 = () => (
   <Card>

@@ -21,7 +21,7 @@ export default class Menu extends React.Component {
     super(props, context)
 
     this.lang = {
-      '/': 'Home',
+      '/': 'Inicio',
       '/experience': 'Experiencia',
       '/projects': 'Proyectos',
       '/skills': 'Habilidades',

@@ -8,9 +8,9 @@ import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import '../styles/Layout'
+import 'styles/Layout'
 
-import palette from '../styles/_variables'
+import palette from 'styles/_variables'
 
 export default class Layout extends React.Component {
   render () {
