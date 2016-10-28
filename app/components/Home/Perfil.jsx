@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
-
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';

@@ -36,6 +36,10 @@ module.exports = {
       PRODUCTION: false,
       DEVELOPMENT: true
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
     new DashboardPlugin()
   ],
   module: {

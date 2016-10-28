@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Container, Row, Col } from 'reactstrap';
 
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
@@ -39,12 +39,12 @@ const CardExampleWithAvatar2 = () => (
 export default class Experience extends React.Component {
   render () {
     return (
-      <Grid class='Home'>
+      <Container class='Home'>
         <Row>
           <Col xs={6} md={3}><Perfil /></Col>
           <Col xs={6} md={9}>{CardExampleWithAvatar2()}</Col>
         </Row>
-      </Grid>
+      </Container>
     )
   }
 }

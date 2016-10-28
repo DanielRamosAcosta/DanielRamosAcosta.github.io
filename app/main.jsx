@@ -16,6 +16,8 @@ import store from './store'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
+import 'bootstrap-loader'
+
 import { syncHistoryWithStore } from 'react-router-redux'
 const history = syncHistoryWithStore(hashHistory, store)
 

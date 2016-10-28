@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavBar from './Menu/NavBar'
-import SideBar from './Menu/SideBar'
+import NavBar from './Menu/Navbar'
+import SideBar from './Menu/Sidebar'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
