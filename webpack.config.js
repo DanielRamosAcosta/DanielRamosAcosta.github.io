@@ -85,6 +85,10 @@ module.exports = {
       {
         test: /\.jpg$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.csv$/,
+        loader: 'csv-loader'
       }
     ]
   },
@@ -94,16 +98,21 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass'],
+    extensions: ['', '.js', '.jsx', '.sass', '.csv'],
     root: [path.join(__dirname, './app')],
     alias: {
       styles: path.resolve(__dirname, 'app', 'styles'),
       components: path.resolve(__dirname, 'app', 'components'),
       reducers: path.resolve(__dirname, 'app', 'reducers'),
+      data: path.resolve(__dirname, 'app', 'data')
     }
   },
   devServer: {
     inline: true,
     hot: true
+  },
+  csv: {
+    dynamicTyping: true,
+    header: true
   }
 };

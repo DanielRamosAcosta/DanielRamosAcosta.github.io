@@ -1,29 +1,49 @@
 import React, { Component } from 'react'
 
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
 
-export default class Experience extends Component {
+import {List, ListItem} from 'material-ui/List';
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import ActionGrade from 'material-ui/svg-icons/action/grade';
+import ContentSend from 'material-ui/svg-icons/content/send';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import Divider from 'material-ui/Divider';
+import ActionInfo from 'material-ui/svg-icons/action/info';
+
+
+const practicas = [
+  {
+    enlace: 'https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-rafadanipedro',
+    titulo: 'Práctica 1. Tareas Iniciales'
+  },
+  {
+    enlace: 'https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro',
+    titulo: 'Práctica 2. Creación de un Paquete NPM'
+  }
+]
+
+export default class Asignatura extends Component {
+  renderPractica () {
+    return practicas.map((practica, i) =>
+      <ListItem primaryText={practica.titulo} leftIcon={<ContentInbox />} key={i} />
+    )
+  }
   render () {
     return (
-      <Card>
+      <Card class='Asignatura'>
         <CardHeader
           title={this.props.name}
           actAsExpander={true}
           showExpandableButton={true}
         />
         <CardText>
-          Una descripción breve de qué va la asignatura, los temas que tratamos quizas las competencias, etc.
+          {this.props.descripcion}
         </CardText>
         <CardText expandable={true}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-          Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-          Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+          <List>
+            {this.renderPractica()}
+          </List>
         </CardText>
-        <CardActions>
-          <FlatButton label='Expandir' />
-        </CardActions>
       </Card>
     )
   }
