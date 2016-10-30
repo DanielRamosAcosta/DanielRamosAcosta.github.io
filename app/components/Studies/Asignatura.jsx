@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Card, CardHeader, CardText } from 'material-ui/Card';
+import { Card, CardHeader, CardText } from 'material-ui/Card'
 
 import { List, ListItem } from 'material-ui/List'
 import Repo from 'components/Icons/Repo'
@@ -22,13 +22,13 @@ export default class Asignatura extends Component {
       <Card class='Asignatura'>
         <CardHeader
           title={this.props.name}
-          actAsExpander={true}
-          showExpandableButton={true}
+          actAsExpander
+          showExpandableButton
         />
         <CardText>
           {this.props.descripcion}
         </CardText>
-        <CardText expandable={true}>
+        <CardText expandable>
           <List>
             {this.renderPractica()}
           </List>

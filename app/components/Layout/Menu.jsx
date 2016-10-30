@@ -33,7 +33,6 @@ export default class Menu extends React.Component {
     this.state = {
       sideBarIsOpen: false
     }
-    console.log(this)
   }
 
   onToggleSidebar () {
@@ -48,7 +47,6 @@ export default class Menu extends React.Component {
 
   render () {
     const path = this.props.location.pathname
-    console.log(path)
 
     return (
       <div>

@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 // Import the plugin:
-var DashboardPlugin = require('webpack-dashboard/plugin');
+var DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = {
   debug: true,
@@ -32,13 +32,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new ExtractTextPlugin('main.css'),
-    new webpack.DefinePlugin({
-      PRODUCTION: false,
-      DEVELOPMENT: true
-    }),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
     new DashboardPlugin()
   ],
@@ -49,7 +45,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ["react", "es2015", "stage-0"],
+          presets: ['react', 'es2015', 'stage-0'],
           plugins: [
             'react-html-attrs',
             'babel-polyfill',
@@ -116,4 +112,4 @@ module.exports = {
     dynamicTyping: true,
     header: true
   }
-};
+}

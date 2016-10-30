@@ -1,12 +1,14 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var StatsPlugin = require('stats-webpack-plugin');
+var path = require('path')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var StatsPlugin = require('stats-webpack-plugin')
 
 module.exports = {
+  debug: true,
+  devtool: 'inline-sourcemap',
   entry: [
     path.join(__dirname, 'app/main.jsx')
   ],
@@ -33,6 +35,10 @@ module.exports = {
       source: false,
       modules: false
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
@@ -44,7 +50,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ["react", "es2015", "stage-0"],
+          presets: ['react', 'es2015', 'stage-0'],
           plugins: [
             'react-html-attrs',
             'babel-polyfill',
@@ -80,6 +86,10 @@ module.exports = {
       {
         test: /\.jpg$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.csv$/,
+        loader: 'csv-loader'
       }
     ]
   },
@@ -87,7 +97,17 @@ module.exports = {
     require('autoprefixer')
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass'],
-    root: [path.join(__dirname, './app')]
+    extensions: ['', '.js', '.jsx', '.sass', '.csv'],
+    root: [path.join(__dirname, './app')],
+    alias: {
+      styles: path.resolve(__dirname, 'app', 'styles'),
+      components: path.resolve(__dirname, 'app', 'components'),
+      reducers: path.resolve(__dirname, 'app', 'reducers'),
+      data: path.resolve(__dirname, 'app', 'data')
+    }
+  },
+  csv: {
+    dynamicTyping: true,
+    header: true
   }
-};
+}

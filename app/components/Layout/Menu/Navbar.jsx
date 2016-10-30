@@ -9,8 +9,6 @@ import 'styles/Layout/Menu/Navbar'
 
 export default class Navbar extends React.Component {
   getTabs (pages) {
-    console.log(pages)
-    console.log(this.props.currentPage)
     return pages.map((page, i) => {
       return <Tab id={page} label={this.props.lang[page]} value={page} class='Tab' key={i} />
     })
@@ -42,7 +40,7 @@ export default class Navbar extends React.Component {
         <AppBar
           title='Daniel Ramos'
           iconElementLeft={this.iconElementLeft()}
-          iconElementRight={this.getTabsElement(location.pathname)}
+          iconElementRight={this.getTabsElement()}
         />
       </div>
     )

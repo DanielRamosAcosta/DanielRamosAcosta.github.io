@@ -1,29 +1,26 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap';
-
-import Asignatura from './Studies/Asignatura'
-import _ from 'lodash'
+import { chunk } from 'lodash'
 import query from 'json-query'
+import { Container, Row, Col } from 'reactstrap'
+import Asignatura from './Studies/Asignatura'
 
 const asignaturas = require('data/asignaturas')
 const practicas = require('data/practicas')
-console.log(asignaturas)
-console.log(practicas)
 
 import 'styles/Studies'
 
 export default class Studies extends React.Component {
   renderRows () {
-    return _.chunk(asignaturas, 3).map((asignaturas, i) =>
+    return chunk(asignaturas, 3).map((asignaturas, i) =>
       <Row key={i}>
         {this.renderCols(asignaturas)}
       </Row>
     )
   }
 
-  renderCols(asignaturas) {
+  renderCols (asignaturas) {
     return asignaturas.map((asignatura, i) =>
-      <Col xs='12' md={12/asignaturas.length} key={i}>
+      <Col xs='12' md={12 / asignaturas.length} key={i}>
         <Asignatura
           name={asignatura.nombre}
           descripcion={asignatura.descripcion}
