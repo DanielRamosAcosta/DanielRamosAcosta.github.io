@@ -1,4 +1,8 @@
-id;id_asignatura;titulo;enlace
-1;8;Práctica 1. Tareas Iniciales;https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-rafadanipedro
-2;8;Práctica 2. Práctica: Creación de un Paquete NPM;https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro
-3;4;Práctica 1. Tareas iniciales;https://github.com/ULL-ESIT-GRADOII-DSI/rafa-daniel-pedro-dsi1516
+id,id_asignatura,titulo,enlace
+1,3,Práctica 1. Tareas iniciales,https://github.com/ULL-ESIT-GRADOII-DSI/rafa-daniel-pedro-dsi1516
+2,7,Práctica 1. Tareas Iniciales,https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-rafadanipedro
+3,7,Práctica 2. Creación de un Paquete NPM,https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro
+4,7,Práctica 3. Despliegues en iaas y heroku,https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-rafadanipedro
+5,7,Práctica 4. Nueva funcionalidad para el Paquete NPM: plugins,https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-rafadanipedro
+6,7,Práctica 5. Plugins: Heroku,https://github.com/ULL-ESIT-SYTW-1617/practica-plugins-heroku-rafadanipedro
+6,7,Práctica 6. Nueva funcionalidad para el Paquete NPM: crear repositorio en GitHub,https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-rafadanipedro

@@ -109,7 +109,8 @@ module.exports = {
   },
   devServer: {
     inline: true,
-    hot: true
+    hot: true,
+    host: process.env.IP || 'localhost'
   },
   csv: {
     dynamicTyping: true,

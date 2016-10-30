@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import Asignatura from './Studies/Asignatura'
 import _ from 'lodash'
+import query from 'json-query'
 
 const asignaturas = require('data/asignaturas')
 const practicas = require('data/practicas')
@@ -10,8 +11,6 @@ console.log(asignaturas)
 console.log(practicas)
 
 import 'styles/Studies'
-
-window.alasql = alasql
 
 export default class Studies extends React.Component {
   renderRows () {
@@ -25,7 +24,11 @@ export default class Studies extends React.Component {
   renderCols(asignaturas) {
     return asignaturas.map((asignatura, i) =>
       <Col xs='12' md={12/asignaturas.length} key={i}>
-        <Asignatura name={asignatura.nombre} descripcion={asignatura.descripcion}/>
+        <Asignatura
+          name={asignatura.nombre}
+          descripcion={asignatura.descripcion}
+          practicas={query(`practicas[*id_asignatura=${asignatura.id}]`, {data: { practicas }}).value}
+        />
       </Col>
     )
   }
