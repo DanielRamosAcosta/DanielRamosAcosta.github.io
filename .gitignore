@@ -4,3 +4,5 @@ dist
 *.log
 *npm-debug*
 .publish
+.DS_Store
+._.DS_Store

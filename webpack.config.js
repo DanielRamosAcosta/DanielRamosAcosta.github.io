@@ -94,13 +94,14 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass', '.csv'],
+    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg'],
     root: [path.join(__dirname, './app')],
     alias: {
       styles: path.resolve(__dirname, 'app', 'styles'),
       components: path.resolve(__dirname, 'app', 'components'),
       reducers: path.resolve(__dirname, 'app', 'reducers'),
-      data: path.resolve(__dirname, 'app', 'data')
+      data: path.resolve(__dirname, 'app', 'data'),
+      images: path.resolve(__dirname, 'app', 'images'),
     }
   },
   devServer: {
