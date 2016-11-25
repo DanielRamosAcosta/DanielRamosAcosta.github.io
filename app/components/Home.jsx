@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'reactstrap'
+import { connect } from 'react-redux'
 import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
@@ -8,8 +9,20 @@ import Perfil from './Home/Perfil'
 
 import 'styles/Home'
 
+@connect(store => {
+  return {
+    store: store
+  }
+})
 export default class Experience extends React.Component {
+  static contextTypes = {
+    router: React.PropTypes.object.isRequired,
+    store: React.PropTypes.object.isRequired
+  }
+
   render () {
+    console.log(this.props)
+    console.log(this.context)
     return (
       <Container class='Home'>
         <Row>

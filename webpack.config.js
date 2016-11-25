@@ -56,20 +56,17 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loader'
       },
       {
         test: /\.sass$/,
         loader: ExtractTextPlugin.extract('style-loader', [
-          'css-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss-loader',
           'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './app')
         ].join('!'))
       },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader?modules'
-      },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'
@@ -94,7 +91,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg'],
+    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg', 'json'],
     root: [path.join(__dirname, './app')],
     alias: {
       styles: path.resolve(__dirname, 'app', 'styles'),
@@ -110,7 +107,8 @@ module.exports = {
     host: process.env.IP || 'localhost'
   },
   csv: {
-    dynamicTyping: true,
-    header: true
+     dynamicTyping: true,
+     header: true,
+     skipEmptyLines: true
   }
 }

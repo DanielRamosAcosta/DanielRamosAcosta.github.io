@@ -19,14 +19,20 @@ export default class Studies extends React.Component {
   }
 
   renderCols (asignaturas) {
-    return asignaturas.map((asignatura, i) =>
-      <Col xs='12' md={12 / asignaturas.length} key={i}>
-        <Asignatura
-          name={asignatura.nombre}
-          descripcion={asignatura.descripcion}
-          practicas={query(`practicas[*id_asignatura=${asignatura.id}]`, {data: { practicas }}).value}
-        />
-      </Col>
+    return asignaturas.map((asignatura, i) => {
+      let prct = query(`practicas[*id_asignatura=${asignatura.id}]`, {data: { practicas }}).value
+      console.log(practicas)
+      console.log(prct)
+      return (
+          <Col xs='12' md={12 / asignaturas.length} key={i}>
+            <Asignatura
+              name={asignatura.nombre}
+              descripcion={asignatura.descripcion}
+              practicas={prct}
+            />
+          </Col>
+        )
+      }
     )
   }
 

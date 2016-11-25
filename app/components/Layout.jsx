@@ -6,15 +6,22 @@ import EasyTransition from 'react-easy-transition'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import { connect } from 'react-redux'
+
 
 import 'styles/Layout'
 
 import palette from 'styles/_variables'
 
+@connect(store => {
+  return {
+    loggedIn: store
+  }
+})
 export default class Layout extends React.Component {
   render () {
     const { location } = this.props
-
+    console.log(this.props)
     return (
       <MuiThemeProvider muiTheme={getMuiTheme({ palette })}>
         <div>
