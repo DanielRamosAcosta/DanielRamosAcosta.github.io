@@ -7,7 +7,7 @@ import FlatButton from 'material-ui/FlatButton'
 
 import Perfil from './Home/Perfil'
 
-import 'styles/Home'
+// import 'styles/Home'
 
 @connect(store => {
   return {

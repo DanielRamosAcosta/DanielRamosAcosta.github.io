@@ -9,7 +9,9 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import { connect } from 'react-redux'
 
 
-import 'styles/Layout'
+// import 'styles/Layout'
+
+import styles from './layout.sass'
 
 import palette from 'styles/_variables'
 
@@ -24,7 +26,7 @@ export default class Layout extends React.Component {
     console.log(this.props)
     return (
       <MuiThemeProvider muiTheme={getMuiTheme({ palette })}>
-        <div>
+        <div class={styles.Layout}>
           <Menu location={location} />
           <div>
             <EasyTransition

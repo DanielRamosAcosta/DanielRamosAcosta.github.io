@@ -7,7 +7,7 @@ import Asignatura from './Studies/Asignatura'
 const asignaturas = require('data/asignaturas')
 const practicas = require('data/practicas')
 
-import 'styles/Studies'
+// import 'styles/Studies'
 
 export default class Studies extends React.Component {
   renderRows () {

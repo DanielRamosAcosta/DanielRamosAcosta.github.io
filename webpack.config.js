@@ -5,7 +5,6 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-// Import the plugin:
 var DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = {
@@ -56,17 +55,17 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: 'json'
       },
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('style-loader', [
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss-loader',
-          'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './app')
-        ].join('!'))
+        loaders: [
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'resolve-url',
+          'sass?sourceMap'
+        ]
       },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'
@@ -90,8 +89,11 @@ module.exports = {
       browsers: ['last 2 versions']
     })
   ],
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./app/styles")]
+  },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg', 'json'],
+    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg', '.css'],
     root: [path.join(__dirname, './app')],
     alias: {
       styles: path.resolve(__dirname, 'app', 'styles'),
@@ -107,8 +109,7 @@ module.exports = {
     host: process.env.IP || 'localhost'
   },
   csv: {
-     dynamicTyping: true,
-     header: true,
-     skipEmptyLines: true
+    dynamicTyping: true,
+    header: true
   }
 }

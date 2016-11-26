@@ -4,7 +4,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import Menu from 'material-ui/Menu'
 
-import 'styles/Layout/Menu/Sidebar'
+// import 'styles/Layout/Menu/Sidebar'
 
 export default class SideBar extends React.Component {
   getItems (items) {

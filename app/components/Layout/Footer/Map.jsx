@@ -2,12 +2,12 @@ import React from 'react'
 
 import {Menu, MenuItem} from 'material-ui/Menu'
 
-import styles from './Map.css'
+import styles from './Map.sass'
 
 export default class Map extends React.Component {
   render () {
     return (
-      <Menu class={styles} value={0} desktop>
+      <Menu class={styles.Map} value={0} desktop>
         <MenuItem value={0} primaryText='Inicio' focusState='focused' />
         <MenuItem value={1} primaryText='Experiencia' />
         <MenuItem value={2} primaryText='Proyectos' />

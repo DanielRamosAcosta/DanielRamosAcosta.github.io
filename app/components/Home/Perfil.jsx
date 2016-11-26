@@ -10,7 +10,7 @@ import TwitterIcon from 'components/Icons/Twitter'
 
 import me from 'images/me'
 
-import 'styles/Home/Perfil'
+// import 'styles/Home/Perfil'
 
 @connect(store => {
   return {

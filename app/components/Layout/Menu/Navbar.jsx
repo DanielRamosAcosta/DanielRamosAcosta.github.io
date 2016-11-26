@@ -5,7 +5,7 @@ import {Tabs, Tab} from 'material-ui/Tabs'
 import IconButton from 'material-ui/IconButton'
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu'
 
-import 'styles/Layout/Menu/Navbar'
+// import 'styles/Layout/Menu/Navbar'
 
 export default class Navbar extends React.Component {
   getTabs (pages) {
