@@ -2,7 +2,27 @@
 
 :global
   html, body
-    background-color: $primary1Color
+    background-color: $canvasColor
+
+  .example-enter
+    opacity: 0.01
+
+  .example-enter.example-enter-active
+    opacity: 1
+    transition: opacity 500ms ease-in
+
+  .example-leave
+    opacity: 1
+
+  .example-leave.example-leave-active
+    opacity: 0.01
+    transition: opacity 300ms ease-in
 
 .Layout
-  background-color: $primary1Color
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  background-color: $canvasColor
+
+.Main
+  flex: 1 0 auto

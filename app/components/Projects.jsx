@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default class Experience extends React.Component {
+export default class Projects extends React.Component {
   render () {
     return (
-      <span>Poner cosas aquí</span>
+      <span>Projects.jsx</span>
     )
   }
 }

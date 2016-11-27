@@ -40,7 +40,9 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      "process.env": {
+         NODE_ENV: JSON.stringify('production')
+      }
     })
   ],
   module: {
@@ -65,15 +67,12 @@ module.exports = {
       },
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('style-loader', [
-          'css-loader',
-          'postcss-loader',
-          'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './app')
-        ].join('!'))
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loaders: [
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'resolve-url',
+          'sass?sourceMap'
+        ]
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -96,6 +95,9 @@ module.exports = {
   postcss: [
     require('autoprefixer')
   ],
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./app/styles")]
+  },
   resolve: {
     extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg'],
     root: [path.join(__dirname, './app')],

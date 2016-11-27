@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-
+import { Router, Route, IndexRoute, hashHistory, applyRouterMiddleware } from 'react-router'
+import {useTransitions, withTransition} from 'react-router-transitions'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { Provider } from 'react-redux'
 
 import Layout from './components/Layout'
@@ -25,8 +26,18 @@ const app = document.getElementById('app')
 
 ReactDOM.render(
   <Provider store={store} >
-    <Router history={history}>
-      <Route path='/' component={Layout}>
+    <Router
+      history={history}
+      render={applyRouterMiddleware(useTransitions({
+        TransitionGroup: ReactCSSTransitionGroup,
+        defaultTransition: {
+          transitionName: 'example',
+          transitionEnterTimeout: 500,
+          transitionLeaveTimeout: 300
+        }
+      }))}
+    >
+      <Route path='/' component={withTransition(Layout)}>
         <IndexRoute component={Home} />
         <Route path='experience' name='experience' component={Experience} />
         <Route path='projects' name='projects' component={Projects} />

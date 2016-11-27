@@ -14,7 +14,7 @@ import Perfil from './Home/Perfil'
     store: store
   }
 })
-export default class Experience extends React.Component {
+export default class Home extends React.Component {
   static contextTypes = {
     router: React.PropTypes.object.isRequired,
     store: React.PropTypes.object.isRequired
@@ -26,8 +26,8 @@ export default class Experience extends React.Component {
     return (
       <Container class='Home'>
         <Row>
-          <Col xs={6} md={3}><Perfil /></Col>
-          <Col xs={6} md={9}>
+          <Col xs={12} md={3}><Perfil /></Col>
+          <Col xs={12} md={9}>
             <Card>
               <CardHeader
                 title='URL Avatar'
