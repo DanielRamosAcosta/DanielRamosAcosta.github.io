@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Grid, Row, Col} from 'react-flexbox-grid'
+import {Container, Row, Col} from 'reactstrap'
 
 import Map from './Footer/Map'
 
@@ -11,11 +11,11 @@ export default class Footer extends React.Component {
     // TODO: Arreglar el footer
     return (
       <div class={styles.Footer}>
-        <Grid>
+        <Container>
           <Row>
-            <Col xs={12} md={4} mdOffset={8}><Map /></Col>
+            <Col xs={12} md={{size: 4, offset: 8}}><Map /></Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     )
   }

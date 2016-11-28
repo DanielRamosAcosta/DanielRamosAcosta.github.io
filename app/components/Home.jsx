@@ -5,7 +5,7 @@ import {Card, CardActions, CardHeader, CardTitle, CardText, CardMedia} from 'mat
 import FlatButton from 'material-ui/FlatButton'
 import LinearProgress from 'material-ui/LinearProgress';
 
-import {Grid, Row, Col} from 'react-flexbox-grid'
+import {Container, Row, Col} from 'reactstrap'
 
 import Perfil from './Home/Perfil'
 
@@ -41,7 +41,7 @@ export default class Home extends React.Component {
   render () {
     console.log(this.props.me)
     return (
-      <Grid>
+      <Container>
         <Row>
           <Col xs={12} sm={6} md={3}>
             <Row>
@@ -116,7 +116,7 @@ export default class Home extends React.Component {
             </Row>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     )
   }
 }

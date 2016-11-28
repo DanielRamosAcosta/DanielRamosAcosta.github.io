@@ -7,7 +7,7 @@ import styles from './Map.sass'
 export default class Map extends React.Component {
   render () {
     return (
-      <Menu class={styles.Map} value={0} desktop>
+      <Menu class={styles.Map} value={0} autoWidth={false} desktop>
         <MenuItem value={0} primaryText='Inicio' focusState='focused' />
         <MenuItem value={1} primaryText='Experiencia' />
         <MenuItem value={2} primaryText='Proyectos' />
