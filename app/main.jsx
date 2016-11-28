@@ -17,8 +17,6 @@ import store from './store'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-import 'bootstrap-loader'
-
 import { syncHistoryWithStore } from 'react-router-redux'
 const history = syncHistoryWithStore(hashHistory, store)
 
@@ -47,3 +45,17 @@ ReactDOM.render(
     </Router>
   </Provider>,
 app)
+
+/*
+
+render={applyRouterMiddleware(useTransitions({
+  TransitionGroup: ReactCSSTransitionGroup,
+  defaultTransition: {
+    transitionName: 'example',
+    transitionEnterTimeout: 500,
+    transitionLeaveTimeout: 300
+  }
+}))}
+
+withTransition(Layout)
+*/

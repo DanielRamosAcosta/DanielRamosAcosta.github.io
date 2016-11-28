@@ -3,14 +3,11 @@ import React from 'react'
 import {Card, CardActions, CardMedia, CardTitle} from 'material-ui/Card'
 import { connect } from 'react-redux'
 import IconButton from 'material-ui/IconButton'
-import GithubIcon from 'components/Icons/Github'
-import FacebookIcon from 'components/Icons/Facebook'
-import LinkedInIcon from 'components/Icons/LinkedIn'
-import TwitterIcon from 'components/Icons/Twitter'
+import SvgIcon from 'material-ui/SvgIcon'
 
 import me from 'images/me'
 
-// import 'styles/Home/Perfil'
+import styles from  './Perfil.sass'
 
 @connect(store => {
   return {
@@ -18,49 +15,31 @@ import me from 'images/me'
   }
 })
 export default class Perfil extends React.Component {
+  renderIcons () {
+    return this.props.redes.map(red =>
+      <IconButton
+        key={red.name}
+        tooltip={red.name}
+        tooltipPosition='top-center'
+        href={red.link}
+      >
+        <SvgIcon viewBox='0 0 40 40'>
+          <path d={red.icon} />
+        </SvgIcon>
+      </IconButton>
+    )
+  }
+
   render () {
-    const {
-      github,
-      facebook,
-      linkedin,
-      twitter
-    } = this.props.redes
     return (
-      <Card class='Perfil'>
+      <Card>
         <CardMedia
           overlay={<CardTitle title='Daniel Ramos' subtitle='danielramosacosta@hotmail.com' />}
         >
           <img src={me} />
         </CardMedia>
-        <CardActions class='actions'>
-          <IconButton
-            tooltip='Github'
-            tooltipPosition='top-center'
-            href={github}
-          >
-            <GithubIcon />
-          </IconButton>
-          <IconButton
-            tooltip='Facebook'
-            tooltipPosition='top-center'
-            href={facebook}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            tooltip='LinkedIn'
-            tooltipPosition='top-center'
-            href={linkedin}
-          >
-            <LinkedInIcon />
-          </IconButton>
-          <IconButton
-            tooltip='Twitter'
-            tooltipPosition='top-center'
-            href={twitter}
-          >
-            <TwitterIcon />
-          </IconButton>
+        <CardActions class={styles.CardActions}>
+          {this.renderIcons()}
         </CardActions>
       </Card>
     )

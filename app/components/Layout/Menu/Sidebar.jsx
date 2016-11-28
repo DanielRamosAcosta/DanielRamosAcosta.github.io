@@ -4,24 +4,20 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import Menu from 'material-ui/Menu'
 
-// import 'styles/Layout/Menu/Sidebar'
+import styles from './Sidebar.sass'
 
 export default class SideBar extends React.Component {
-  getItems (items) {
-    return items.map((item, i) => {
-      if (this.props.currentPage === item) {
-        var focusState = 'focused'
-      }
-      return (
-        <MenuItem
-          key={i}
-          value={item}
-          focusState={focusState}
-        >
-          {this.props.lang[item]}
-        </MenuItem>
-      )
-    })
+  renderMenuItems (items) {
+    return items.map((item, i) =>
+      <MenuItem
+        key={i}
+        value={item}
+        focusState={this.props.currentPage === item ? 'focused' : 'none'}
+        class={styles.MenuItem}
+      >
+        {this.props.lang[item]}
+      </MenuItem>
+    )
   }
 
   onPageChange (newPage) {
@@ -30,30 +26,30 @@ export default class SideBar extends React.Component {
     })
   }
 
-  getSidebarElements () {
+  renderSidebar () {
     return (
       <Menu
         onChange={(_, e) => this.props.onPageChange(e)}
         value={this.props.currentPage}
+        style={{width: 200}}
       >
-        {this.getItems(this.props.pages)}
+        {this.renderMenuItems(this.props.pages)}
       </Menu>
     )
   }
 
-  onToggle (e) {
+  onToggle () {
     this.setState({open: !this.props.sideBarIsOpen})
   }
 
   render () {
     return (
       <Drawer
-        open={this.props.sideBarIsOpen}
         docked={false}
+        open={this.props.sideBarIsOpen}
         onRequestChange={this.props.onToggleSidebar}
-        class='Sidebar'
       >
-        {this.getSidebarElements()}
+        {this.renderSidebar()}
       </Drawer>
     )
   }

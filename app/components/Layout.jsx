@@ -20,12 +20,10 @@ import palette from 'styles/_variables'
 })
 export default class Layout extends React.Component {
   render () {
-    const { location } = this.props
-    console.log(this.props)
     return (
       <MuiThemeProvider muiTheme={getMuiTheme({ palette })}>
         <div class={styles.Layout}>
-          <Menu location={location} />
+          <Menu location={this.props.location} />
           <div class={styles.Main}>
             {this.props.children}
           </div>

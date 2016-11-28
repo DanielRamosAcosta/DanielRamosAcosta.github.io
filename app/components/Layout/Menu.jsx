@@ -1,16 +1,12 @@
 import React from 'react'
 
-import NavBar from './Menu/Navbar'
+import Appbar from './Menu/Appbar'
+import Navbar from './Menu/Navbar'
 import SideBar from './Menu/Sidebar'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
-@connect(store => {
-  return {
-    currentPath: store.routing
-  }
-  return {}
-})
+@connect()
 export default class Menu extends React.Component {
   static contextTypes = {
     router: React.PropTypes.object.isRequired,
@@ -50,12 +46,14 @@ export default class Menu extends React.Component {
 
     return (
       <div>
-        <NavBar
+        <Appbar
+          onToggleSidebar={::this.onToggleSidebar}
+        />
+        <Navbar
           pages={this.pages}
           lang={this.lang}
           currentPage={path}
           onPageChange={::this.onPageChange}
-          onToggleSidebar={::this.onToggleSidebar}
         />
         <SideBar
           pages={this.pages}
