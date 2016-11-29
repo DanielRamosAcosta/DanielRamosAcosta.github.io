@@ -7,6 +7,7 @@ import Repo from 'components/Icons/Repo'
 
 export default class Asignatura extends Component {
   renderPractica () {
+    if (!this.props.practicas) return
     return this.props.practicas.map((practica, i) =>
       <ListItem
         key={i}
@@ -19,6 +20,18 @@ export default class Asignatura extends Component {
 
   render () {
     return (
+      <div>
+        <h2>{this.props.name}</h2>
+        <p>{this.props.descripcion}</p>
+      </div>
+    )
+  }
+}
+
+/*
+
+render () {
+    return (
       <Card class='Asignatura'>
         <CardHeader
           title={this.props.name}
@@ -26,7 +39,7 @@ export default class Asignatura extends Component {
           showExpandableButton
         />
         <CardText>
-          {this.props.descripcion}
+          
         </CardText>
         <CardText expandable>
           <List>
@@ -36,4 +49,5 @@ export default class Asignatura extends Component {
       </Card>
     )
   }
-}
+
+*/

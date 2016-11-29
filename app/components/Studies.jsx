@@ -3,15 +3,17 @@ import { chunk } from 'lodash'
 import query from 'json-query'
 import { Container, Row, Col } from 'reactstrap'
 import Asignatura from './Studies/Asignatura'
+import Paper from 'material-ui/Paper';
 
 const asignaturas = require('data/asignaturas')
-const practicas = require('data/practicas')
+
+console.log(asignaturas)
 
 // import 'styles/Studies'
 
 export default class Studies extends React.Component {
   renderRows () {
-    return chunk(asignaturas, 3).map((asignaturas, i) =>
+    return chunk(asignaturas, 2).map((asignaturas, i) =>
       <Row key={i}>
         {this.renderCols(asignaturas)}
       </Row>
@@ -20,15 +22,13 @@ export default class Studies extends React.Component {
 
   renderCols (asignaturas) {
     return asignaturas.map((asignatura, i) => {
-      let prct = query(`practicas[*id_asignatura=${asignatura.id}]`, {data: { practicas }}).value
-      console.log(practicas)
-      console.log(prct)
+      console.log(asignatura)
       return (
-          <Col xs='12' md={12 / asignaturas.length} key={i}>
+          <Col xs={12} md={6} key={i}>
             <Asignatura
               name={asignatura.nombre}
               descripcion={asignatura.descripcion}
-              practicas={prct}
+              practicas={asignatura.practicas}
             />
           </Col>
         )
@@ -38,15 +38,17 @@ export default class Studies extends React.Component {
 
   render () {
     return (
-      <div class='Studies'>
+      <div>
         <Container>
-          <Row>
-            <Col xs='12' class='Title'>
-              <h1>Estudios</h1>
-              <hr />
-            </Col>
-          </Row>
-          {this.renderRows()}
+          <Paper style={{padding: '1em'}}>
+            <Row>
+              <Col xs='12' class='Title'>
+                <h1>Estudios</h1>
+                <hr />
+              </Col>
+            </Row>
+            {this.renderRows()}
+            </Paper>
         </Container>
       </div>
     )

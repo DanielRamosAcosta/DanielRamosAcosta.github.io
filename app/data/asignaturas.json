@@ -1,0 +1,97 @@
+[
+  {
+    "nombre": "Algoritmos y estructuras de Datos Avanzados",
+    "curso": 2,
+    "descripcion": "Idear, diseñar e implementar algoritmos eficientes para resolver problemas informáticos. Idear, estructurar y definir estructuras de datos apropiadas para aplicaciones."
+  },
+  {
+    "nombre": "Sistemas Operativos",
+    "curso": 2,
+    "descripcion": "La finalidad de esta asignatura, en el contexto del Módulo de Sistemas Operativos, Sistemas Distribuidos y Redes del que forma parte, es aprender a diseñar e implementar aplicaciones que hagan uso de los servicios proporcionados por el sistema operativo, así como proporcionar los conocimientos necesarios para utilizar el sistema operativo a nivel de usuario avanzado"
+  },
+  {
+    "nombre": "Desarrollo de Sistemas Informáticos",
+    "curso": 3,
+    "descripcion": "Configurar, administrar y utilizar entornos para el desarrollo de aplicaciones utilizando las tecnologías web actuales. Desarrollar aplicaciones en entornos de desarrollo web que implementen prototipos sencillos de sistemas de información con gestión de usuarios.",
+    "practicas": [
+      {
+        "titulo": "Práctica 1. Tareas iniciales",
+        "enlace": "https://github.com/ULL-ESIT-GRADOII-DSI/rafa-daniel-pedro-dsi1516"
+      }
+    ]
+  },
+  {
+    "nombre": "Inteligencia Artificial",
+    "curso": 3,
+    "descripcion": "Realizar una síntesis por escrito de los sistemas inteligentes y su aplicación práctica. Extraer y representar conocimiento para la implementación de sistemas inteligentes mediante lógica. Extraer y representar conocimiento para la implementación de sistemas inteligentes mediante sistemas basados en reglas. Diseñar, implementar y evaluar algoritmos de búsquedas en espacios de estados para la resolución de problemas. Conocer y aplicar los conocimientos teóricos y prácticos de la materia."
+  },
+  {
+    "nombre": "Lenguajes y Paradigmas de Programación",
+    "curso": 3,
+    "descripcion": "Autónomamente analizar, evaluar e integrar información técnica sobre los paradigmas y lenguajes de programación más idóneos para resolver problemas y proponer una implantación en sistemas concurrentes, paralelos, distribuidos y en tiempo real y argumentar por escrito sus propuestas."
+  },
+  {
+    "nombre": "Sistemas de Interacción Persona Computador",
+    "curso": 3,
+    "descripcion": "Conocimiento y aplicación de los conceptos teóricos relacionados con los sistemas de interacción persona computador. Conocimiento de los lenguajes y herramientas necesarias para el diseño y desarrollo de interfaces interactivas. Conocimiento de las metodologías y técnicas necesarias para el diseño de proyectos centrados en el usuario."
+  },
+  {
+    "nombre": "Sistemas y Tecnologías Web",
+    "curso": 4,
+    "descripcion": "Diseño, desarrollo e implementación. Arquitecturas orientadas a servicios. Software social y colaborativo. Fundamentos, sistemas, servicios y aplicaciones basados en contenidos multimedia. Comercio electrónico. Medios y librerías digitales.",
+    "practicas": [
+      {
+        "titulo": "Práctica 1. Tareas Iniciales",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 2. Creación de un Paquete NPM",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 3. Despliegues en iaas y heroku",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 4. Nueva funcionalidad para el Paquete NPM: plugins",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 5. Plugins: Heroku",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/practica-plugins-heroku-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 6. Nueva funcionalidad para el Paquete NPM: crear repositorio en GitHub",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/crear-repositorio-en-github-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 7. Autenticación OAuth con Passport",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/autenticacion-oauth-con-passport-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 8: Passport y LocalStrategy",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/passport-y-localstrategy-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 9: LocalStrategy y Base de Datos",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-rafadanipedro"
+      },
+      {
+        "titulo": "Práctica 10: Añadir HTTPS al servidor del libro",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/https-al-servidor-del-libro-rafadanipedro"
+      },
+      {
+        "titulo": "Gitbook de mi presentación",
+        "enlace": "https://ull-esit-sytw-1617.github.io/presentaciones-todos/babel-es6-es7-y-es8/"
+      },
+      {
+        "titulo": "Presentación",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/PresentacionESX_STYW"
+      },
+      {
+        "titulo": "Proyecto final",
+        "enlace": "https://github.com/ULL-ESIT-SYTW-1617/proyecto-sytw-16-17-rafadanipedro"
+      }
+    ]
+  }
+]
