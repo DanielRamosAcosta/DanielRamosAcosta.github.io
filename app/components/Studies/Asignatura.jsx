@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 
-import { Card, CardHeader, CardText } from 'material-ui/Card'
+import { Card, CardHeader, CardText, CardActions } from 'material-ui/Card'
 
 import { List, ListItem } from 'material-ui/List'
+import FlatButton from 'material-ui/FlatButton';
+
+
 import Repo from 'components/Icons/Repo'
+
+import styles from './Asignatura.sass'
 
 export default class Asignatura extends Component {
   renderPractica () {
@@ -20,10 +25,25 @@ export default class Asignatura extends Component {
 
   render () {
     return (
-      <div>
-        <h2>{this.props.name}</h2>
-        <p>{this.props.descripcion}</p>
-      </div>
+      <Card class={styles.Asignatura}>
+        <CardHeader
+          title={this.props.name}
+          actAsExpander
+          showExpandableButton
+        />
+        <CardText>
+          {this.props.descripcion}
+        </CardText>
+        <CardText expandable>
+          <List>
+            {this.renderPractica()}
+          </List>
+        </CardText>
+        <div style={{height: '100%'}}/>
+        <CardActions>
+          <FlatButton label="Action1" />
+        </CardActions>
+      </Card>
     )
   }
 }

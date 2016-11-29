@@ -7,49 +7,39 @@ import Paper from 'material-ui/Paper';
 
 const asignaturas = require('data/asignaturas')
 
-console.log(asignaturas)
-
-// import 'styles/Studies'
+import styles from './Studies.sass'
 
 export default class Studies extends React.Component {
   renderRows () {
     return chunk(asignaturas, 2).map((asignaturas, i) =>
-      <Row key={i}>
+      <Row key={i} class={styles.row}>
         {this.renderCols(asignaturas)}
       </Row>
     )
   }
 
   renderCols (asignaturas) {
-    return asignaturas.map((asignatura, i) => {
-      console.log(asignatura)
-      return (
-          <Col xs={12} md={6} key={i}>
-            <Asignatura
-              name={asignatura.nombre}
-              descripcion={asignatura.descripcion}
-              practicas={asignatura.practicas}
-            />
-          </Col>
-        )
-      }
+    return asignaturas.map((asignatura, i) =>
+      <Col xs={12} md={6} key={i}>
+        <Asignatura
+          name={asignatura.nombre}
+          descripcion={asignatura.descripcion}
+          practicas={asignatura.practicas}
+        />
+      </Col>
     )
   }
 
   render () {
     return (
       <div>
-        <Container>
-          <Paper style={{padding: '1em'}}>
-            <Row>
-              <Col xs='12' class='Title'>
-                <h1>Estudios</h1>
-                <hr />
-              </Col>
-            </Row>
-            {this.renderRows()}
-            </Paper>
-        </Container>
+        <Row>
+          <Col xs={12} class='Title'>
+            <h1>Estudios</h1>
+            <hr />
+          </Col>
+        </Row>
+        {this.renderRows()}
       </div>
     )
   }
