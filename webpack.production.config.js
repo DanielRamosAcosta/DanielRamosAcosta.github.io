@@ -99,7 +99,7 @@ module.exports = {
     includePaths: [path.resolve(__dirname, "./app/styles")]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.sass', '.csv', '.jpg'],
+    extensions: ['', '.js', '.jsx', '.sass', '.json', '.jpg', '.css'],
     root: [path.join(__dirname, './app')],
     alias: {
       styles: path.resolve(__dirname, 'app', 'styles'),
