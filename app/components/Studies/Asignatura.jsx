@@ -40,9 +40,6 @@ export default class Asignatura extends Component {
           </List>
         </CardText>
         <div style={{height: '100%'}}/>
-        <CardActions>
-          <FlatButton label="Action1" />
-        </CardActions>
       </Card>
     )
   }

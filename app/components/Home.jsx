@@ -54,30 +54,36 @@ export default class Home extends React.Component {
                 <Card>
                   <CardTitle title='Idiomas'/>
                   <CardText>
-                    <p>
-                      Epañol
-                    </p>
-                    <LinearProgress
-                      mode='determinate'
-                      value={100}
-                      class={styles.Language}
-                    />
-                    <p>
-                      Inglés
-                    </p>
-                    <LinearProgress
-                      mode='determinate'
-                      value={85}
-                      class={styles.Language}
-                    />
-                    <p>
-                      Francés
-                    </p>
-                    <LinearProgress
-                      mode='determinate'
-                      value={25}
-                      class={styles.Language}
-                    />
+                    <div class={styles.Language}>
+                      <p>
+                        Epañol
+                      </p>
+                      <LinearProgress
+                        mode='determinate'
+                        value={100}
+                        class={styles.LanguageProgress}
+                      />
+                    </div>
+                    <div class={styles.Language}>
+                      <p>
+                        Inglés
+                      </p>
+                      <LinearProgress
+                        mode='determinate'
+                        value={85}
+                        class={styles.LanguageProgress}
+                      />
+                      </div>
+                    <div class={styles.Language}>
+                      <p>
+                        Francés
+                      </p>
+                      <LinearProgress
+                        mode='determinate'
+                        value={25}
+                        class={styles.LanguageProgress}
+                      />
+                    </div>
                   </CardText>
                 </Card>
               </Col>

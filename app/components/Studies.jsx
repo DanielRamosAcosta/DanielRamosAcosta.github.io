@@ -20,7 +20,7 @@ export default class Studies extends React.Component {
 
   renderCols (asignaturas) {
     return asignaturas.map((asignatura, i) =>
-      <Col xs={12} md={6} key={i}>
+      <Col xs={12} sm={6} key={i}>
         <Asignatura
           name={asignatura.nombre}
           descripcion={asignatura.descripcion}
@@ -33,13 +33,15 @@ export default class Studies extends React.Component {
   render () {
     return (
       <div>
-        <Row>
-          <Col xs={12} class='Title'>
-            <h1>Estudios</h1>
-            <hr />
-          </Col>
-        </Row>
-        {this.renderRows()}
+        <Paper class={styles.Contenedor}>
+          <Row>
+            <Col xs={12} class={styles.Title}>
+              <h1>Estudios</h1>
+              <hr />
+            </Col>
+          </Row>
+          {this.renderRows()}
+        </Paper>
       </div>
     )
   }
