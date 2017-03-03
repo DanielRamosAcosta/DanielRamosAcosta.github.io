@@ -1,25 +1,23 @@
 import React from 'react'
 import { chunk } from 'lodash'
-import query from 'json-query'
-import { Container, Row, Col } from 'reactstrap'
-import Asignatura from './Studies/Asignatura'
+import { Row, Col } from 'reactstrap'
 import Paper from 'material-ui/Paper';
 
-const asignaturas = require('data/asignaturas')
+import Asignatura from './Studies/Asignatura'
+import asignaturas from 'data/asignaturas'
 
 import styles from './Studies.sass'
 
 export default class Studies extends React.Component {
-  renderRows () {
-    return chunk(asignaturas, 2).map((asignaturas, i) =>
+  renderRows = () =>
+    chunk(asignaturas, 2).map((asignaturas, i) =>
       <Row key={i} class={styles.row}>
         {this.renderCols(asignaturas)}
       </Row>
     )
-  }
 
-  renderCols (asignaturas) {
-    return asignaturas.map((asignatura, i) =>
+  renderCols = asignaturas =>
+    asignaturas.map((asignatura, i) =>
       <Col xs={12} sm={6} key={i}>
         <Asignatura
           name={asignatura.nombre}
@@ -28,21 +26,17 @@ export default class Studies extends React.Component {
         />
       </Col>
     )
-  }
 
-  render () {
-    return (
-      <div>
-        <Paper class={styles.Contenedor}>
-          <Row>
-            <Col xs={12} class={styles.Title}>
-              <h1>Estudios</h1>
-              <hr />
-            </Col>
-          </Row>
-          {this.renderRows()}
-        </Paper>
-      </div>
-    )
-  }
+  render = () =>
+    <div>
+      <Paper class={styles.Contenedor}>
+        <Row>
+          <Col xs={12} class={styles.Title}>
+            <h1>Estudios</h1>
+            <hr />
+          </Col>
+        </Row>
+        {this.renderRows()}
+      </Paper>
+    </div>
 }
