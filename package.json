@@ -34,7 +34,6 @@
     "bootstrap": "4.0.0-alpha.5",
     "bootstrap-sass": "3.3.7",
     "classnames": "2.2.5",
-    "flexboxContainer": "6.3.1",
     "json-query": "2.2.0",
     "lodash": "4.17.2",
     "material-colors": "^1.2.0",
