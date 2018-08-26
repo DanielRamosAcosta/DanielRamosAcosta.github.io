@@ -1,0 +1,13 @@
+.container {
+  max-width: 210mm;
+  background-color: white;
+}
+
+.topSpcer {
+  height: 45px;
+  background-color: var(--light-gray);
+}
+
+.content {
+  padding: 10px;
+}

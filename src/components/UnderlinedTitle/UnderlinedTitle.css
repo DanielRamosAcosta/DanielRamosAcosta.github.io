@@ -1,0 +1,18 @@
+.container {
+  font-family: OpenSans;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 7px;
+  color: var(--gray);
+  margin-top: 40px;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background-color: #afafaf;
+}
+
+.realContainer {
+  margin-bottom: 20px;
+}

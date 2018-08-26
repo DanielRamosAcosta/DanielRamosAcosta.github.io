@@ -1,0 +1,28 @@
+/*span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+b,
+u,
+i {
+  color: #535353;
+}
+*/
+body {
+  font-family: Raleway;
+}
+
+b {
+  font-weight: 600;
+}
+
+:root {
+  --gray: #4a4a4a;
+  --light-gray: #eaeaea;
+  --lighter-gray: #f3f3f3;
+}

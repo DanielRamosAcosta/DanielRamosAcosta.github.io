@@ -1,0 +1,15 @@
+.innerList {
+}
+
+.innerList span {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--gray);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

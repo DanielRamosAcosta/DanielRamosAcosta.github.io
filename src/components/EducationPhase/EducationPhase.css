@@ -1,0 +1,21 @@
+.container {
+  /* TODO: implement styles */
+  background-color: white;
+}
+
+.educationName {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gray);
+}
+
+.universityName {
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.dateRange {
+  font-size: 14px;
+}

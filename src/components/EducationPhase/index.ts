@@ -1,0 +1,1 @@
+export { EducationPhase } from './EducationPhase'

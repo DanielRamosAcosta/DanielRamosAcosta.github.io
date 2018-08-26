@@ -1,0 +1,8 @@
+.container {
+  --margin: 10px;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: Raleway;
+  margin-bottom: var(--margin);
+  margin-top: var(--margin);
+}

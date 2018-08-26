@@ -1,0 +1,114 @@
+.container {
+  background: linear-gradient(
+    135deg,
+    #bbbcbe 0%,
+    #9c9da1 50%,
+    #e2e3e5 50%,
+    #d1d5d8 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 210mm) {
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media print {
+  .container {
+    background-color: white;
+    padding: 0;
+  }
+}
+
+.sheetContainer {
+  box-shadow: 0px 0px 110px -20px rgba(0, 0, 0, 0.75);
+}
+
+@media print {
+  .sheetContainer {
+    box-shadow: none;
+  }
+}
+
+.curriculumContainer {
+  display: grid;
+  grid-template-columns: 0.3fr 21px 1fr;
+  grid-template-areas:
+    'contact   vspacer profile                '
+    'm-spacer  vspacer .......................'
+    'education vspacer professional-experience'
+    'skills    vspacer professional-experience';
+}
+
+@media only screen and (max-width: 210mm) {
+  .curriculumContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'profile'
+      'professional-experience'
+      'education'
+      'skills'
+      'contact';
+  }
+}
+
+.sheet {
+  padding: 30px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.education {
+  grid-area: education;
+}
+
+.professionalExperience {
+  grid-area: professional-experience;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.vspacer {
+  --gap: 20px;
+  width: 1px;
+  grid-area: vspacer;
+  background-color: #afafaf;
+  margin-left: calc(var(--gap) / 2);
+  margin-right: calc(var(--gap) / 2);
+}
+
+.hspacer {
+  grid-area: hspacer;
+  height: 20px;
+  background-color: #f6f6f6;
+}
+
+.middleSpacer {
+  grid-area: m-spacer;
+}
+
+@media print {
+  .middleSpacer {
+    height: 200px;
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  /* TODO: Implement styles */
+  background-color: white;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listItem span {
+  font-size: 13px;
+  margin-left: 10px;
+}

@@ -1,0 +1,12 @@
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.container::before {
+  content: '●';
+  color: var(--gray);
+  margin-right: 15px;
+  font-size: 10px;
+}

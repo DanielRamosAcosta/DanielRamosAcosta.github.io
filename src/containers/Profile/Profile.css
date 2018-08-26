@@ -1,0 +1,17 @@
+.container {
+  /* TODO: Implement styles */
+  background-color: white;
+}
+
+.list li {
+  margin-left: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.list li::before {
+  content: '●';
+  color: var(--gray);
+  margin-right: 15px;
+  font-size: 10px;
+}
