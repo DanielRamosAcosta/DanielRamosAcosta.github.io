@@ -49,6 +49,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "postbuild": "react-snap",
+    "deploy": "gh-pages -d build -b master",
     "pdf": "node scripts/pdf.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -59,6 +60,7 @@
     "@types/react": "^16.4.8",
     "@types/react-dom": "^16.0.7",
     "express": "^4.16.3",
+    "gh-pages": "^1.2.0",
     "puppeteer": "^1.7.0",
     "react-snap": "^1.10.1",
     "typescript": "^3.0.1"
