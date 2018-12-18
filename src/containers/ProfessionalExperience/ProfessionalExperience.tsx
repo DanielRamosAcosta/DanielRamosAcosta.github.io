@@ -4,7 +4,6 @@ import React, { SFC } from 'react'
 import { JobPhase } from '../../components/JobPhase'
 import { Paragraph } from '../../components/Paragraph'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './ProfessionalExperience.module.css'
 
 interface ProfessionalExperienceProps {
   className?: string
@@ -13,7 +12,7 @@ interface ProfessionalExperienceProps {
 export const ProfessionalExperience: SFC<ProfessionalExperienceProps> = ({
   className,
 }) => (
-  <section className={classNames(styles.borrame, className)}>
+  <section className={className}>
     <UnderlinedTitle>Professional Experience</UnderlinedTitle>
     <JobPhase
       jobName="Frontend developer"

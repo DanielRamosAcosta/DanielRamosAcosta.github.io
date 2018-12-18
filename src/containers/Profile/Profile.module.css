@@ -1,8 +1,4 @@
-.container {
-  /* TODO: Implement styles */
-  background-color: white;
-}
-
+/* TODO: move this styles into its own component */
 .list li {
   margin-left: 40px;
   margin-top: 5px;

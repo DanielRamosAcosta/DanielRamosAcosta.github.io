@@ -4,14 +4,13 @@ import React, { SFC } from 'react'
 import { SkillList } from '../../components/SkillList'
 import { SkillListItem } from '../../components/SkillListItem'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Skills.module.css'
 
 interface SkillsProps {
   className?: string
 }
 
 export const Skills: SFC<SkillsProps> = ({ className }) => (
-  <section className={classNames(styles.borrame, className)}>
+  <section className={className}>
     <UnderlinedTitle>Skills</UnderlinedTitle>
     <SkillList title="Professional">
       <SkillListItem>Web Development</SkillListItem>

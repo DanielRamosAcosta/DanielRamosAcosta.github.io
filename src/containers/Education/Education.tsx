@@ -3,14 +3,13 @@ import React, { SFC } from 'react'
 
 import { EducationPhase } from '../../components/EducationPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Education.module.css'
 
 interface EducationProps {
   className?: string
 }
 
 export const Education: SFC<EducationProps> = ({ className }) => (
-  <section className={classNames(styles.borrame, className)}>
+  <section className={className}>
     <UnderlinedTitle>Education</UnderlinedTitle>
     <EducationPhase
       educationName="Degree in Computer Engineering"

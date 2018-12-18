@@ -15,7 +15,7 @@ export const EducationPhase: SFC<EducationPhaseProps> = ({
   educationName,
   universityName,
 }) => (
-  <div className={styles.container}>
+  <div>
     <p className={styles.educationName}>{educationName}</p>
     <p className={styles.universityName}>{universityName}</p>
     <p className={styles.dateRange}>

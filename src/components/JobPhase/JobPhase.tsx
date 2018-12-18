@@ -16,7 +16,7 @@ export const JobPhase: SFC<JobPhaseProps> = ({
   endDate,
   children,
 }) => (
-  <div className={styles.container}>
+  <div>
     <p className={styles.jobName}>{jobName}</p>
     <p className={styles.companyAndDates}>
       <span>{companyName}</span>

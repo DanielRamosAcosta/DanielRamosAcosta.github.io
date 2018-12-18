@@ -10,7 +10,7 @@ interface ProfileProps {
 }
 
 export const Profile: SFC<ProfileProps> = ({ className }) => (
-  <section className={classNames(styles.borrame, className)}>
+  <section className={className}>
     <UnderlinedTitle>Profile</UnderlinedTitle>
     <Paragraph>
       My name is <b>Daniel Ramos</b>, I'm a full-stack developer and technology

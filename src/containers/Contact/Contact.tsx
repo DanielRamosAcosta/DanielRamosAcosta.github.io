@@ -8,14 +8,13 @@ import { LinkedInIcon } from '../../components/icons/LinkedIn'
 import { LocationIcon } from '../../components/icons/Location'
 import { MediumIcon } from '../../components/icons/Medium'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Contact.module.css'
 
 interface ContactProps {
   className?: string
 }
 
 export const Contact: SFC<ContactProps> = ({ className }) => (
-  <section className={classNames(styles.borrame, className)}>
+  <section className={className}>
     <UnderlinedTitle>Contact</UnderlinedTitle>
     <ul>
       <ContactListItem
