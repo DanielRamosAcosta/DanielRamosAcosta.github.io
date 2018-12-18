@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import styles from './generic-icon.module.css'
 
@@ -7,7 +7,7 @@ interface LocationIconProps {
   color?: string
 }
 
-export const LocationIcon: React.SFC<LocationIconProps> = ({ size, color }) => (
+export const LocationIcon: SFC<LocationIconProps> = ({ size, color }) => (
   <div className={styles.icon}>
     <svg width={size} aria-hidden="true" viewBox="0 0 512 512">
       <path
@@ -20,5 +20,5 @@ export const LocationIcon: React.SFC<LocationIconProps> = ({ size, color }) => (
 
 LocationIcon.defaultProps = {
   color: 'var(--gray)',
-  size: 20
+  size: 20,
 }

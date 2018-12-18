@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import styles from './Sheet.module.css'
 
@@ -8,10 +8,10 @@ interface SheetProps {
   className?: string
 }
 
-export const Sheet: React.SFC<SheetProps> = ({
+export const Sheet: SFC<SheetProps> = ({
   className,
   containerClass,
-  children
+  children,
 }) => (
   <main className={classNames(styles.container, containerClass)}>
     <div className={styles.topSpcer} />

@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import { SkillList } from '../../components/SkillList'
 import { SkillListItem } from '../../components/SkillListItem'
@@ -10,7 +10,7 @@ interface SkillsProps {
   className?: string
 }
 
-export const Skills: React.SFC<SkillsProps> = ({ className }) => (
+export const Skills: SFC<SkillsProps> = ({ className }) => (
   <section className={classNames(styles.borrame, className)}>
     <UnderlinedTitle>Skills</UnderlinedTitle>
     <SkillList title="Professional">

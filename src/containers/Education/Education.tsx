@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import { EducationPhase } from '../../components/EducationPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
@@ -9,7 +9,7 @@ interface EducationProps {
   className?: string
 }
 
-export const Education: React.SFC<EducationProps> = ({ className }) => (
+export const Education: SFC<EducationProps> = ({ className }) => (
   <section className={classNames(styles.borrame, className)}>
     <UnderlinedTitle>Education</UnderlinedTitle>
     <EducationPhase

@@ -1,8 +1,8 @@
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import styles from './UnderlinedTitle.module.css'
 
-export const UnderlinedTitle: React.SFC<{}> = ({ children }) => (
+export const UnderlinedTitle: SFC<{}> = ({ children }) => (
   <div className={styles.realContainer}>
     <h3 className={styles.container}>{children}</h3>
     <hr className={styles.line} />

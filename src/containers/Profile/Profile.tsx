@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import { Paragraph } from '../../components/Paragraph'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
@@ -9,7 +9,7 @@ interface ProfileProps {
   className?: string
 }
 
-export const Profile: React.SFC<ProfileProps> = ({ className }) => (
+export const Profile: SFC<ProfileProps> = ({ className }) => (
   <section className={classNames(styles.borrame, className)}>
     <UnderlinedTitle>Profile</UnderlinedTitle>
     <Paragraph>

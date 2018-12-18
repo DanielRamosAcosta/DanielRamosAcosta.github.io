@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import * as React from 'react'
+import React, { SFC } from 'react'
 
 import { ContactListItem } from '../../components/ContactListItem'
 import { EmailIcon } from '../../components/icons/Email'
@@ -14,7 +14,7 @@ interface ContactProps {
   className?: string
 }
 
-export const Contact: React.SFC<ContactProps> = ({ className }) => (
+export const Contact: SFC<ContactProps> = ({ className }) => (
   <section className={classNames(styles.borrame, className)}>
     <UnderlinedTitle>Contact</UnderlinedTitle>
     <ul>
