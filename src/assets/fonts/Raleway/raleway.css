@@ -1,28 +1,33 @@
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url(./Raleway-Regular.ttf);
 }
 
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url(./Raleway-Light.ttf);
   font-weight: 300;
 }
 
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url(./Raleway-Medium.ttf);
   font-weight: 500;
 }
 
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url(./Raleway-SemiBold.ttf);
   font-weight: 600;
 }
 
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url(./Raleway-Bold.ttf);
   font-weight: bold;
 }
