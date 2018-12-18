@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import * as React from 'react'
 
-import styles from './Sheet.css'
+import styles from './Sheet.module.css'
 
 interface SheetProps {
   containerClass?: string

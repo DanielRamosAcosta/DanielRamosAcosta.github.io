@@ -1,9 +1,9 @@
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 import * as React from 'react'
 
 import { EducationPhase } from '../../components/EducationPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Education.css'
+import styles from './Education.module.css'
 
 interface EducationProps {
   className?: string

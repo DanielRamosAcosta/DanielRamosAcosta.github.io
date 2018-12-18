@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import * as React from 'react'
 
-import styles from './Paragraph.css'
+import styles from './Paragraph.module.css'
 
 interface ParagraphProps {
   className?: string

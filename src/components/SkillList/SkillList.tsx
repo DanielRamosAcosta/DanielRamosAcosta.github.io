@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import styles from './SkillList.css'
+import styles from './SkillList.module.css'
 
 interface SkillListProps {
   title: string

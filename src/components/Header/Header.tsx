@@ -1,7 +1,7 @@
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 import * as React from 'react'
 
-import styles from './Header.css'
+import styles from './Header.module.css'
 
 import logo from './leanmind-logo.svg'
 

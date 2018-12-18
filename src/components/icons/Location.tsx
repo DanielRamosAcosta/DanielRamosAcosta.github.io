@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import styles from './generic-icon.-styles.css'
+import styles from './generic-icon.module.css'
 
 interface LocationIconProps {
   size?: number

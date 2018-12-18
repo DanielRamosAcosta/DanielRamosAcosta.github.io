@@ -1,9 +1,9 @@
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 import * as React from 'react'
 
 import { Paragraph } from '../../components/Paragraph'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Profile.css'
+import styles from './Profile.module.css'
 
 interface ProfileProps {
   className?: string

@@ -1,10 +1,10 @@
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 import * as React from 'react'
 
 import { JobPhase } from '../../components/JobPhase'
 import { Paragraph } from '../../components/Paragraph'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './ProfessionalExperience.css'
+import styles from './ProfessionalExperience.module.css'
 
 interface ProfessionalExperienceProps {
   className?: string
@@ -52,10 +52,10 @@ export const ProfessionalExperience: React.SFC<ProfessionalExperienceProps> = ({
           <b>Blockchain POC</b>: A system for uploading litications that are
           hashed and persisted in Ethereum Blockchain
         </li>
-        <li>  
+        <li>
           <b>AI Document Classification POC</b>: An Artificial Intelligence
-          system that retrieves several documents from the clients' database, and
-          sorts them into several categories using Tensorflow's Deep Neural
+          system that retrieves several documents from the clients' database,
+          and sorts them into several categories using Tensorflow's Deep Neural
           Networks.
         </li>
       </ul>

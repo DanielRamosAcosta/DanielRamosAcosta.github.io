@@ -1,10 +1,10 @@
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 import * as React from 'react'
 
 import { SkillList } from '../../components/SkillList'
 import { SkillListItem } from '../../components/SkillListItem'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import styles from './Skills.css'
+import styles from './Skills.module.css'
 
 interface SkillsProps {
   className?: string

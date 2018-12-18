@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import styles from './EducationPhase.css'
+import styles from './EducationPhase.module.css'
 
 interface EducationPhaseProps {
   startDate: Date
@@ -13,7 +13,7 @@ export const EducationPhase: React.SFC<EducationPhaseProps> = ({
   startDate,
   endDate,
   educationName,
-  universityName
+  universityName,
 }) => (
   <div className={styles.container}>
     <p className={styles.educationName}>{educationName}</p>

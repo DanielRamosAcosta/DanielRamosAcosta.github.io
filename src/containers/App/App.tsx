@@ -6,7 +6,7 @@ import { ProfessionalExperience } from '../ProfessionalExperience'
 import { Profile } from '../Profile'
 import { Skills } from '../Skills'
 
-import { Header } from '../../components/Header'
+import { Header } from '../../components/Header/index'
 import { Sheet } from '../../components/Sheet'
 
 import '../../assets/styles/reset.css'
@@ -14,7 +14,8 @@ import '../../assets/styles/reset.css'
 import '../../assets/fonts/Open_Sans/open-sans.css'
 import '../../assets/fonts/Raleway/raleway.css'
 import '../../assets/styles/global.css'
-import styles from './App.css'
+
+import styles from './App.module.css'
 
 class App extends React.Component {
   public render() {

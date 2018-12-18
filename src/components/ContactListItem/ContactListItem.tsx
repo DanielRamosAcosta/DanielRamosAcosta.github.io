@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import styles from './ContactListItem.css'
+import styles from './ContactListItem.module.css'
 
 interface ContactListItemProps {
   icon: React.StatelessComponent

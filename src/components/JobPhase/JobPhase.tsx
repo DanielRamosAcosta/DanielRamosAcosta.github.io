@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import styles from './JobPhase.css'
+import styles from './JobPhase.module.css'
 
 interface JobPhaseProps {
   jobName: string
