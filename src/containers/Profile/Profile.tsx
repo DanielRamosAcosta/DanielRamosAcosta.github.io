@@ -29,8 +29,8 @@ export const Profile: React.SFC<ProfileProps> = ({ className }) => (
       native apps, but I would like to learn Angular and Vue in the future.
     </Paragraph>
     <Paragraph>
-      In the sysadmin world, I have avanced knowledge of Docker an Kubernetes.
-      In the last year I have deployed containers in <b>Amazon Web Service</b>{' '}
+      In the sysadmin world, I have advanced knowledge of Docker and Kubernetes.
+      In the last year, I have deployed containers in <b>Amazon Web Services</b>{' '}
       but I have also used other cloud proviers and services, specially{' '}
       <b>Google Kubernetes Engine</b>.
     </Paragraph>

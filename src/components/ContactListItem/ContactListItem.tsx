@@ -11,10 +11,10 @@ interface ContactListItemProps {
 export const ContactListItem: React.SFC<ContactListItemProps> = ({
   icon: Icon,
   text,
-  link
+  link,
 }) => (
   <li className={styles.innerList}>
-    <a href={link} target="_blank" className={styles.link}>
+    <a href={link} target="_blank" rel="noopener" className={styles.link}>
       <Icon />
       <span>{text}</span>
     </a>

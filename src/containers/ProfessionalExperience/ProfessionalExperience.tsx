@@ -11,7 +11,7 @@ interface ProfessionalExperienceProps {
 }
 
 export const ProfessionalExperience: React.SFC<ProfessionalExperienceProps> = ({
-  className
+  className,
 }) => (
   <section className={classNames(styles.borrame, className)}>
     <UnderlinedTitle>Professional Experience</UnderlinedTitle>
@@ -21,10 +21,10 @@ export const ProfessionalExperience: React.SFC<ProfessionalExperienceProps> = ({
       startDate={new Date('07/03/2018')}
     >
       <Paragraph>
-        I started at Lean Mind in search of better progmming habits and to
+        I started at Lean Mind in search of better programming habits and to
         enforce myself to use best practices. By the brief time I have been
-        here, I learned many things, specially about <b>Code Quality</b>,{' '}
-        <b>Test Driven Developent</b>, enterprise architectures and agile
+        here, I learned many things, especially about <b>Code Quality</b>,{' '}
+        <b>Test Driven Development</b>, enterprise architectures, and agile
         methodologies.
       </Paragraph>
     </JobPhase>
@@ -36,32 +36,32 @@ export const ProfessionalExperience: React.SFC<ProfessionalExperienceProps> = ({
     >
       <Paragraph>
         I joined Open Canarias at the investigation and development department
-        when I finished my Degree at Computer Engineering. I started developing
-        an iOS app but my main job has been as full-stack developer using React
-        at the frontend and Node.js at the backend. Also, I have developed some
-        POCs using innovative technolgies like <b>Blockchain</b> or{' '}
+        when I finished my Degree in Computer Engineering. I started developing
+        an iOS app, but my main job has been as a full-stack developer using
+        React at the frontend and Node.js at the backend. Also, I have developed
+        some POCs using innovative technologies like <b>Blockchain</b> or{' '}
         <b>Deep Neural Networks</b>, Here are some remarkable projects:
       </Paragraph>
       <ul>
         <li>
           <b>Yogabot</b>: A smart Yoga trainer using AI (specifically,
-          Facebook's Detectron) to analize your body and recommend specific Yoga
+          Facebook's Detectron) to analyze your body and recommend specific Yoga
           exercises
         </li>
         <li>
           <b>Blockchain POC</b>: A system for uploading litications that are
           hashed and persisted in Ethereum Blockchain
         </li>
-        <li>
+        <li>  
           <b>AI Document Classification POC</b>: An Artificial Intelligence
-          system that retrieves several documents from the clients database, and
-          sorts them into serveral categories using Tensorflow's Deep Neural
+          system that retrieves several documents from the clients' database, and
+          sorts them into several categories using Tensorflow's Deep Neural
           Networks.
         </li>
       </ul>
       <Paragraph>
         At Open Canarias I was also introduced into{' '}
-        <b>Functional Reactive Programing</b> using RxJS for React and Akka
+        <b>Functional Reactive Programming</b> using RxJS for React and Akka
         Streams at the backend.
       </Paragraph>
     </JobPhase>
