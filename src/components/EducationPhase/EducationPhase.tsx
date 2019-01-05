@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './EducationPhase.module.css'
 
@@ -9,7 +9,7 @@ interface EducationPhaseProps {
   universityName: string
 }
 
-export const EducationPhase: SFC<EducationPhaseProps> = ({
+export const EducationPhase: FC<EducationPhaseProps> = ({
   startDate,
   endDate,
   educationName,

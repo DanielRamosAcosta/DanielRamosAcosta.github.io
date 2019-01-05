@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './Header.module.css'
 
@@ -11,7 +11,7 @@ interface HeaderProps {
   className?: string
 }
 
-export const Header: SFC<HeaderProps> = ({ className, personName, role }) => (
+export const Header: FC<HeaderProps> = ({ className, personName, role }) => (
   <header className={classNames(styles.container, className)}>
     <h1 className={styles.personName}>{personName}</h1>
     <p className={styles.role}>{role}</p>

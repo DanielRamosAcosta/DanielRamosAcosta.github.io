@@ -1,5 +1,4 @@
-import classNames from 'classnames'
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import { SkillList } from '../../components/SkillList'
 import { SkillListItem } from '../../components/SkillListItem'
@@ -9,7 +8,7 @@ interface SkillsProps {
   className?: string
 }
 
-export const Skills: SFC<SkillsProps> = ({ className }) => (
+export const Skills: FC<SkillsProps> = ({ className }) => (
   <section className={className}>
     <UnderlinedTitle>Skills</UnderlinedTitle>
     <SkillList title="Professional">

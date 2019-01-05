@@ -1,14 +1,14 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './ContactListItem.module.css'
 
 interface ContactListItemProps {
-  icon: SFC
+  icon: FC
   text: string
   link: string
 }
 
-export const ContactListItem: SFC<ContactListItemProps> = ({
+export const ContactListItem: FC<ContactListItemProps> = ({
   icon: Icon,
   text,
   link,

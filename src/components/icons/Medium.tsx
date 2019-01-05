@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './generic-icon.module.css'
 
@@ -7,7 +7,7 @@ interface MediumIconProps {
   color?: string
 }
 
-export const MediumIcon: SFC<MediumIconProps> = ({ size, color }) => (
+export const MediumIcon: FC<MediumIconProps> = ({ size, color }) => (
   <div className={styles.icon}>
     <svg aria-hidden="true" viewBox="0 0 512 512" width={size}>
       <path

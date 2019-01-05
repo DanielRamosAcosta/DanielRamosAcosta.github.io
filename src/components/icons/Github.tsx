@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './generic-icon.module.css'
 
@@ -7,7 +7,7 @@ interface GithubIconProps {
   color?: string
 }
 
-export const GithubIcon: SFC<GithubIconProps> = ({ size, color }) => (
+export const GithubIcon: FC<GithubIconProps> = ({ size, color }) => (
   <div className={styles.icon}>
     <svg aria-hidden="true" width={size} viewBox="0 0 496 496">
       <path

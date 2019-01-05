@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import { Contact } from '../Contact'
 import { Education } from '../Education'
@@ -17,7 +17,7 @@ import '../../assets/styles/global.css'
 
 import styles from './App.module.css'
 
-const App: SFC<{}> = () => (
+const App: FC<{}> = () => (
   <div className={styles.container}>
     <Sheet className={styles.sheet} containerClass={styles.sheetContainer}>
       <Header

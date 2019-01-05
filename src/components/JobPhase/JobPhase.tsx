@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './JobPhase.module.css'
 
@@ -9,7 +9,7 @@ interface JobPhaseProps {
   endDate?: Date
 }
 
-export const JobPhase: SFC<JobPhaseProps> = ({
+export const JobPhase: FC<JobPhaseProps> = ({
   jobName,
   companyName,
   startDate,

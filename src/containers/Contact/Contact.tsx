@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import { ContactListItem } from '../../components/ContactListItem'
 import { EmailIcon } from '../../components/icons/Email'
@@ -13,7 +13,7 @@ interface ContactProps {
   className?: string
 }
 
-export const Contact: SFC<ContactProps> = ({ className }) => (
+export const Contact: FC<ContactProps> = ({ className }) => (
   <section className={className}>
     <UnderlinedTitle>Contact</UnderlinedTitle>
     <ul>

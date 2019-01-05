@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './Sheet.module.css'
 
@@ -8,7 +8,7 @@ interface SheetProps {
   className?: string
 }
 
-export const Sheet: SFC<SheetProps> = ({
+export const Sheet: FC<SheetProps> = ({
   className,
   containerClass,
   children,

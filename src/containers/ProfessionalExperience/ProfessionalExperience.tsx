@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import { JobPhase } from '../../components/JobPhase'
 import { Paragraph } from '../../components/Paragraph'
@@ -9,7 +9,7 @@ interface ProfessionalExperienceProps {
   className?: string
 }
 
-export const ProfessionalExperience: SFC<ProfessionalExperienceProps> = ({
+export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
   className,
 }) => (
   <section className={className}>

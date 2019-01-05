@@ -1,4 +1,4 @@
-import React, { SFC } from 'react'
+import React, { FC } from 'react'
 
 import styles from './generic-icon.module.css'
 
@@ -7,7 +7,7 @@ interface LinkedInIconProps {
   color?: string
 }
 
-export const LinkedInIcon: SFC<LinkedInIconProps> = ({ size, color }) => (
+export const LinkedInIcon: FC<LinkedInIconProps> = ({ size, color }) => (
   <div className={styles.icon}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
