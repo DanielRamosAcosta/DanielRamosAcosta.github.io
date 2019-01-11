@@ -4,6 +4,15 @@ import './index.css'
 import App from './containers/App/App'
 import * as serviceWorker from './serviceWorker'
 
+const isLocalhost =
+  window && window.location && window.location.href.match('localhost')
+const isInsecure =
+  window && window.location && window.location.protocol === 'http:'
+
+if (!isLocalhost && isInsecure) {
+  window.location.href = 'https://www.danielramos.me'
+}
+
 const rootElement = document.getElementById('root') as HTMLDivElement
 
 if (rootElement.hasChildNodes()) {
