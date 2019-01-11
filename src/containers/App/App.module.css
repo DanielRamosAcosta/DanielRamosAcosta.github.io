@@ -64,6 +64,14 @@
   padding: 30px;
 }
 
+.sheetTopContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
 .header {
   grid-area: header;
 }

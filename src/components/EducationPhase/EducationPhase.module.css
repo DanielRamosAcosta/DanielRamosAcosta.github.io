@@ -4,6 +4,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--gray);
+  line-height: 1.4em;
 }
 
 .universityName {

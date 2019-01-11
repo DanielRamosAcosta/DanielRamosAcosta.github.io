@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 
 import { Contact } from '../Contact'
 import { Education } from '../Education'
@@ -17,28 +17,51 @@ import '../../assets/styles/global.css'
 
 import styles from './App.module.css'
 
-const App: FC<{}> = () => (
-  <div className={styles.container}>
-    <Sheet className={styles.sheet} containerClass={styles.sheetContainer}>
-      <Header
-        personName="Daniel Ramos"
-        role="Full-stack Developer"
-        className={styles.header}
-      />
-      <div>
-        <div className={styles.hspacer} />
-        <div className={styles.curriculumContainer}>
-          <div className={styles.vspacer} />
-          <Contact className={styles.contact} />
-          <Profile className={styles.profile} />
-          <div className={styles.middleSpacer} />
-          <Education className={styles.education} />
-          <ProfessionalExperience className={styles.professionalExperience} />
-          <Skills className={styles.skills} />
-        </div>
+import {
+  IsSpanishProvider,
+  isSpanishContextDefaultValue,
+} from '../IsSpanishContext'
+
+const App: FC<{}> = () => {
+  const [isSpanish, setIsSpanish] = useState(isSpanishContextDefaultValue)
+
+  return (
+    <IsSpanishProvider value={isSpanish}>
+      <div className={styles.container}>
+        <Sheet
+          className={styles.sheet}
+          containerClass={styles.sheetContainer}
+          topContainerChildren={() => (
+            <div className={styles.sheetTopContainer}>
+              <button onClick={() => setIsSpanish(!isSpanish)}>
+                IsSpanish
+              </button>
+            </div>
+          )}
+        >
+          <Header
+            personName="Daniel Ramos"
+            role="Full-stack Developer"
+            className={styles.header}
+          />
+          <div>
+            <div className={styles.hspacer} />
+            <div className={styles.curriculumContainer}>
+              <div className={styles.vspacer} />
+              <Contact className={styles.contact} />
+              <Profile className={styles.profile} />
+              <div className={styles.middleSpacer} />
+              <Education className={styles.education} />
+              <ProfessionalExperience
+                className={styles.professionalExperience}
+              />
+              <Skills className={styles.skills} />
+            </div>
+          </div>
+        </Sheet>
       </div>
-    </Sheet>
-  </div>
-)
+    </IsSpanishProvider>
+  )
+}
 
 export default App
