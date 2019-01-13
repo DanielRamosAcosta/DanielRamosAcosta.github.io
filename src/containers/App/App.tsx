@@ -34,7 +34,10 @@ const App: FC<{}> = () => {
           containerClass={styles.sheetContainer}
           topContainerChildren={() => (
             <div className={styles.sheetTopContainer}>
-              <TranslationButton onClick={() => setIsSpanish(!isSpanish)} />
+              <TranslationButton
+                onClick={() => setIsSpanish(!isSpanish)}
+                className={styles.translationButton}
+              />
             </div>
           )}
         >

@@ -72,6 +72,12 @@
   padding: 0 10px;
 }
 
+@media print {
+  .translationButton {
+    display: none !important;
+  }
+}
+
 .header {
   grid-area: header;
 }
