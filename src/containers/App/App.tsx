@@ -21,6 +21,7 @@ import {
   IsSpanishProvider,
   isSpanishContextDefaultValue,
 } from '../IsSpanishContext'
+import { TranslationButton } from '../../components/TranslationButton'
 
 const App: FC<{}> = () => {
   const [isSpanish, setIsSpanish] = useState(isSpanishContextDefaultValue)
@@ -33,9 +34,7 @@ const App: FC<{}> = () => {
           containerClass={styles.sheetContainer}
           topContainerChildren={() => (
             <div className={styles.sheetTopContainer}>
-              <button onClick={() => setIsSpanish(!isSpanish)}>
-                IsSpanish
-              </button>
+              <TranslationButton onClick={() => setIsSpanish(!isSpanish)} />
             </div>
           )}
         >
