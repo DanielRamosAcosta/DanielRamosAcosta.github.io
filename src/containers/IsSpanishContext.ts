@@ -4,5 +4,5 @@ export const isSpanishContextDefaultValue = navigator.language === 'es-ES'
 
 const IsSpanish = React.createContext(isSpanishContextDefaultValue)
 
-export const IsSpanishProvider = IsSpanish.Provider
-export const IsSpanishConsumer = IsSpanish.Consumer
+export const LanguageProvider = IsSpanish.Provider
+export const LanguageConsumer = IsSpanish.Consumer

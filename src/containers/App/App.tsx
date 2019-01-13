@@ -18,7 +18,7 @@ import '../../assets/styles/global.css'
 import styles from './App.module.css'
 
 import {
-  IsSpanishProvider,
+  LanguageProvider,
   isSpanishContextDefaultValue,
 } from '../IsSpanishContext'
 import { TranslationButton } from '../../components/TranslationButton'
@@ -27,7 +27,7 @@ const App: FC<{}> = () => {
   const [isSpanish, setIsSpanish] = useState(isSpanishContextDefaultValue)
 
   return (
-    <IsSpanishProvider value={isSpanish}>
+    <LanguageProvider value={isSpanish}>
       <div className={styles.container}>
         <Sheet
           className={styles.sheet}
@@ -62,7 +62,7 @@ const App: FC<{}> = () => {
           </div>
         </Sheet>
       </div>
-    </IsSpanishProvider>
+    </LanguageProvider>
   )
 }
 
