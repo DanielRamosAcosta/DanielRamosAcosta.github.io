@@ -104,8 +104,8 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
           <Paragraph className={styles.list}>
             {isSpanish ? (
               <>
-                A parte de estos aspectos técnicos, imparto formaciones de vez
-                en cuando:
+                A parte de estos aspectos técnicos, en ocasiones he impartido
+                formaciones:
                 <ul>
                   <li>
                     <b>

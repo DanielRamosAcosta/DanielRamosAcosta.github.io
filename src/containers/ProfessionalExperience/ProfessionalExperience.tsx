@@ -104,7 +104,7 @@ export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
                       licitaciones que se hashean y persisten en la blockchain
                       de Ethereum. Esto es para que el hash sea público e
                       inmutable, pero que el documento original se mantenga
-                      privado, ya que no se puede obtener el docummento original
+                      privado, ya que no se puede obtener el documento original
                       a partir del hash.
                     </li>
                     <li>
