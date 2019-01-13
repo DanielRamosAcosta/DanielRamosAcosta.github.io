@@ -1,6 +1,11 @@
 import React from 'react'
 
-export const isSpanishContextDefaultValue = navigator.language === 'es-ES'
+export enum Language {
+  Spanish = 'es-ES',
+  English = 'en-US',
+}
+
+export const isSpanishContextDefaultValue = navigator.language as Language
 
 const IsSpanish = React.createContext(isSpanishContextDefaultValue)
 

@@ -20,14 +20,15 @@ import styles from './App.module.css'
 import {
   LanguageProvider,
   isSpanishContextDefaultValue,
+  Language,
 } from '../IsSpanishContext'
 import { TranslationButton } from '../../components/TranslationButton'
 
 const App: FC<{}> = () => {
-  const [isSpanish, setIsSpanish] = useState(isSpanishContextDefaultValue)
+  const [language, setLanguage] = useState(isSpanishContextDefaultValue)
 
   return (
-    <LanguageProvider value={isSpanish}>
+    <LanguageProvider value={language}>
       <div className={styles.container}>
         <Sheet
           className={styles.sheet}
@@ -35,7 +36,13 @@ const App: FC<{}> = () => {
           topContainerChildren={() => (
             <div className={styles.sheetTopContainer}>
               <TranslationButton
-                onClick={() => setIsSpanish(!isSpanish)}
+                onClick={() =>
+                  setLanguage(
+                    language === Language.Spanish
+                      ? Language.English
+                      : Language.Spanish,
+                  )
+                }
                 className={styles.translationButton}
               />
             </div>

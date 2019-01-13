@@ -1,27 +1,39 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 
-import { LanguageConsumer } from '../IsSpanishContext'
+import { LanguageConsumer, Language } from '../IsSpanishContext'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
 import { Paragraph } from '../../components/Paragraph'
 
 import styles from './Profile.module.css'
+import { i18n, languageIs } from '../../i18n'
 
 interface ProfileProps {
   className?: string
 }
 
+const englishLang = {
+  profile: 'Profile',
+}
+
+const spanishLang: typeof englishLang = {
+  profile: 'Perfil',
+}
+
 export const Profile: FC<ProfileProps> = ({ className }) => (
   <LanguageConsumer>
-    {isSpanish => {
+    {language => {
+      const getLabel = i18n(language, { englishLang, spanishLang })
+      const isSpanish = languageIs(language, Language.Spanish)
+
       return (
         <section className={className}>
-          <UnderlinedTitle>Profile</UnderlinedTitle>
+          <UnderlinedTitle>{getLabel('profile')}</UnderlinedTitle>
           <Paragraph>
             {isSpanish ? (
               <>
                 Mi nombre es <b>Daniel Ramos</b>, soy un desarrollador
-                Full-Stack y entusiasta de la tecnología. Estoy enamorado de
+                full-stack y entusiasta de la tecnología. Estoy enamorado de
                 Javascript y la programación funcional. Disfruto compartiendo mi
                 conocimiento con otros y aprendiendo de ellos.
               </>
