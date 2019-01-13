@@ -3,11 +3,13 @@
   margin-left: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .list li::before {
   content: '●';
   color: var(--gray);
-  margin-right: 15px;
   font-size: 10px;
+  position: absolute;
+  left: -20px;
 }
