@@ -57,7 +57,6 @@ const App: FC<{}> = () => {
             <div className={styles.hspacer} />
             <div className={styles.curriculumContainer}>
               <div className={styles.vspacer} />
-              <Contact className={styles.contact} />
               <Profile className={styles.profile} />
               <div className={styles.middleSpacer} />
               <Education className={styles.education} />
@@ -65,6 +64,7 @@ const App: FC<{}> = () => {
                 className={styles.professionalExperience}
               />
               <Skills className={styles.skills} />
+              <Contact className={styles.contact} />
             </div>
           </div>
         </Sheet>
