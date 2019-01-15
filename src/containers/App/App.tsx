@@ -23,6 +23,7 @@ import {
   Language,
 } from '../IsSpanishContext'
 import { TranslationButton } from '../../components/TranslationButton'
+import { PrintButton } from '../../components/PrintButton'
 
 const App: FC<{}> = () => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
@@ -43,7 +44,11 @@ const App: FC<{}> = () => {
                       : Language.Spanish,
                   )
                 }
-                className={styles.translationButton}
+                className={styles.hideWhenPrinting}
+              />
+              <PrintButton
+                onClick={() => window.print()}
+                className={styles.hideWhenPrinting}
               />
             </div>
           )}

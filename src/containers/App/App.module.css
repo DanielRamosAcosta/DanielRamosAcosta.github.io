@@ -73,7 +73,7 @@
 }
 
 @media print {
-  .translationButton {
+  .hideWhenPrinting {
     display: none !important;
   }
 }
