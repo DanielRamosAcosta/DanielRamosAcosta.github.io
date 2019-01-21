@@ -19,6 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "pdf": "node scripts/pdf.js",
     "postbuild": "react-snap",
     "deploy": "gh-pages -d build -b master"
   },
