@@ -1,0 +1,5 @@
+.circleIcon {
+  background-color: var(--lighter-gray);
+  padding: 8px;
+  border-radius: 50%;
+}

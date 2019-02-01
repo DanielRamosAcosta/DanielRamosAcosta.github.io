@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import React, { FC } from 'react'
 
 import { ContactListItem } from '../../components/ContactListItem'
@@ -7,9 +6,16 @@ import { GithubIcon } from '../../components/icons/Github'
 import { LinkedInIcon } from '../../components/icons/LinkedIn'
 import { LocationIcon } from '../../components/icons/Location'
 import { MediumIcon } from '../../components/icons/Medium'
+import { CircleIconHOC } from '../../HOCs/CircleIconHOC/CircleIconHOC'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
+
+const CircleEmailIcon = CircleIconHOC(EmailIcon)
+const CircleGithubIcon = CircleIconHOC(GithubIcon)
+const CircleLinkedInIcon = CircleIconHOC(LinkedInIcon)
+const CircleLocationIcon = CircleIconHOC(LocationIcon)
+const CircleMediumIcon = CircleIconHOC(MediumIcon)
 
 interface ContactProps {
   className?: string
@@ -35,31 +41,31 @@ export const Contact: FC<ContactProps> = ({ className }) => (
           <UnderlinedTitle>{getLabel('contact')}</UnderlinedTitle>
           <ul>
             <ContactListItem
-              icon={EmailIcon}
+              icon={CircleEmailIcon}
               link="mailto:daniel.ramos@leanmind.es"
               text="daniel.ramos@leanmind.es"
             />
             <div style={{ width: 10, height: 10 }} />
             <ContactListItem
-              icon={LocationIcon}
+              icon={CircleLocationIcon}
               link="https://www.google.es/maps/place/Tenerife"
               text={getLabel('tenerife_canary_islands')}
             />
             <div style={{ width: 10, height: 10 }} />
             <ContactListItem
-              icon={GithubIcon}
+              icon={CircleGithubIcon}
               link="https://github.com/DanielRamosAcosta"
               text="@DanielRamosAcosta"
             />
             <div style={{ width: 10, height: 10 }} />
             <ContactListItem
-              icon={LinkedInIcon}
+              icon={CircleLinkedInIcon}
               link="https://linkedin.com/in/danielramosacosta/"
               text="/in/DanielRamosAcosta"
             />
             <div style={{ width: 10, height: 10 }} />
             <ContactListItem
-              icon={MediumIcon}
+              icon={CircleMediumIcon}
               link="https://medium.com/@danielramosacosta"
               text="@danielramosacosta"
             />
