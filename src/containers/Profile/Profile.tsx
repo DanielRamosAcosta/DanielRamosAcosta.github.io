@@ -2,8 +2,8 @@ import classNames from 'classnames'
 import React, { FC } from 'react'
 
 import { LanguageConsumer, Language } from '../IsSpanishContext'
-import { UnderlinedTitle } from '../../components/UnderlinedTitle'
-import { Paragraph } from '../../components/Paragraph'
+import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
+import { Paragraph } from '../../components/Paragraph/Paragraph'
 
 import classes from './Profile.module.css'
 import { i18n, languageIs } from '../../i18n'

@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
 
-import { ContactListItem } from '../../components/ContactListItem'
+import { ContactListItem } from '../../components/ContactListItem/ContactListItem'
 import { EmailIcon } from '../../components/icons/Email'
 import { GithubIcon } from '../../components/icons/Github'
 import { LinkedInIcon } from '../../components/icons/LinkedIn'
 import { LocationIcon } from '../../components/icons/Location'
 import { MediumIcon } from '../../components/icons/Medium'
 import { CircleIconHOC } from '../../HOCs/CircleIconHOC/CircleIconHOC'
-import { UnderlinedTitle } from '../../components/UnderlinedTitle'
+import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
 

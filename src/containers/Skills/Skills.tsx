@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import { SkillList } from '../../components/SkillList'
-import { SkillListItem } from '../../components/SkillListItem'
-import { UnderlinedTitle } from '../../components/UnderlinedTitle'
+import { SkillList } from '../../components/SkillList/SkillList'
+import { SkillListItem } from '../../components/SkillListItem/SkillListItem'
+import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
 

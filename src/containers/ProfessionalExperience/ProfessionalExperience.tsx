@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 
-import { JobPhase } from '../../components/JobPhase'
-import { Paragraph } from '../../components/Paragraph'
-import { UnderlinedTitle } from '../../components/UnderlinedTitle'
+import { JobPhase } from '../../components/JobPhase/JobPhase'
+import { Paragraph } from '../../components/Paragraph/Paragraph'
+import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer, Language } from '../IsSpanishContext'
 import { languageIs, i18n } from '../../i18n'
 

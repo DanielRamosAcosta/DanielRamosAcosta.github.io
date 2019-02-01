@@ -1,8 +1,8 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 
-import { EducationPhase } from '../../components/EducationPhase'
-import { UnderlinedTitle } from '../../components/UnderlinedTitle'
+import { EducationPhase } from '../../components/EducationPhase/EducationPhase'
+import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
 

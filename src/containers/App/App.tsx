@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react'
 
-import { Contact } from '../Contact'
-import { Education } from '../Education'
-import { ProfessionalExperience } from '../ProfessionalExperience'
-import { Profile } from '../Profile'
-import { Skills } from '../Skills'
+import { Contact } from '../Contact/Contact'
+import { Education } from '../Education/Education'
+import { ProfessionalExperience } from '../ProfessionalExperience/ProfessionalExperience'
+import { Profile } from '../Profile/Profile'
+import { Skills } from '../Skills/Skills'
 
 import {
   LanguageProvider,
@@ -12,11 +12,11 @@ import {
   Language,
 } from '../IsSpanishContext'
 
-import { Header } from '../../components/Header'
-import { Sheet } from '../../components/Sheet'
-// import { PrintButton } from '../../components/PrintButton'
-import { ButtonIconHOC } from '../../HOCs/ButtonIconHOC/ButtonIconHOC'
+import { Header } from '../../components/Header/Header'
+import { Sheet } from '../../components/Sheet/Sheet'
 import { TranslationIcon } from '../../components/icons/Translation'
+import { PrintIcon } from '../../components/icons/Print'
+import { ButtonIconHOC } from '../../HOCs/ButtonIconHOC/ButtonIconHOC'
 
 import '../../assets/styles/reset.css'
 
@@ -25,7 +25,6 @@ import '../../assets/fonts/Raleway/raleway.css'
 import '../../assets/styles/global.css'
 
 import classes from './App.module.css'
-import { PrintIcon } from '../../components/icons/Print'
 
 const TranslationButton = ButtonIconHOC(TranslationIcon)
 const PrintButton = ButtonIconHOC(PrintIcon)
