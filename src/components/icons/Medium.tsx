@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import styles from './generic-icon.module.css'
+import classes from './generic-icon.module.css'
 
 interface MediumIconProps {
   size?: number
@@ -9,7 +9,7 @@ interface MediumIconProps {
 
 export const MediumIcon: FC<MediumIconProps> = ({ size, color }) => (
   <svg
-    className={styles.container}
+    className={classes.container}
     aria-hidden="true"
     viewBox="0 0 512 512"
     width={size}

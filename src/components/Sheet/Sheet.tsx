@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 
-import styles from './Sheet.module.css'
+import classes from './Sheet.module.css'
 
 interface SheetProps {
   containerClass?: string
@@ -15,10 +15,10 @@ export const Sheet: FC<SheetProps> = ({
   children,
   topContainerChildren: TopContainerChildren,
 }) => (
-  <main className={classNames(styles.container, containerClass)}>
-    <div className={styles.topSpcer}>
+  <main className={classNames(classes.container, containerClass)}>
+    <div className={classes.topSpcer}>
       <TopContainerChildren />
     </div>
-    <div className={classNames(styles.content, className)}>{children}</div>
+    <div className={classNames(classes.content, className)}>{children}</div>
   </main>
 )

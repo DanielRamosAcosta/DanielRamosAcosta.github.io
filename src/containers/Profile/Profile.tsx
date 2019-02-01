@@ -5,7 +5,7 @@ import { LanguageConsumer, Language } from '../IsSpanishContext'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle'
 import { Paragraph } from '../../components/Paragraph'
 
-import styles from './Profile.module.css'
+import classes from './Profile.module.css'
 import { i18n, languageIs } from '../../i18n'
 
 interface ProfileProps {
@@ -101,7 +101,7 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
               </>
             )}
           </Paragraph>
-          <Paragraph className={styles.list}>
+          <Paragraph className={classes.list}>
             {isSpanish ? (
               <>
                 A parte de estos aspectos técnicos, en ocasiones he impartido

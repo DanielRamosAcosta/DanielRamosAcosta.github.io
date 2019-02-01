@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import styles from './EducationPhase.module.css'
+import classes from './EducationPhase.module.css'
 
 interface EducationPhaseProps {
   startDate: Date
@@ -16,9 +16,9 @@ export const EducationPhase: FC<EducationPhaseProps> = ({
   universityName,
 }) => (
   <div>
-    <p className={styles.educationName}>{educationName}</p>
-    <p className={styles.universityName}>{universityName}</p>
-    <p className={styles.dateRange}>
+    <p className={classes.educationName}>{educationName}</p>
+    <p className={classes.universityName}>{universityName}</p>
+    <p className={classes.dateRange}>
       {startDate.getFullYear()} - {endDate.getFullYear()}
     </p>
   </div>

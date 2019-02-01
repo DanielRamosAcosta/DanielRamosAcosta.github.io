@@ -15,7 +15,7 @@ import '../../assets/fonts/OpenSans/open-sans.css'
 import '../../assets/fonts/Raleway/raleway.css'
 import '../../assets/styles/global.css'
 
-import styles from './App.module.css'
+import classes from './App.module.css'
 
 import {
   LanguageProvider,
@@ -30,12 +30,12 @@ const App: FC<{}> = () => {
 
   return (
     <LanguageProvider value={language}>
-      <div className={styles.container}>
+      <div className={classes.container}>
         <Sheet
-          className={styles.sheet}
-          containerClass={styles.sheetContainer}
+          className={classes.sheet}
+          containerClass={classes.sheetContainer}
           topContainerChildren={() => (
-            <div className={styles.sheetTopContainer}>
+            <div className={classes.sheetTopContainer}>
               <TranslationButton
                 onClick={() =>
                   setLanguage(
@@ -44,11 +44,11 @@ const App: FC<{}> = () => {
                       : Language.Spanish,
                   )
                 }
-                className={styles.hideWhenPrinting}
+                className={classes.hideWhenPrinting}
               />
               <PrintButton
                 onClick={() => window.print()}
-                className={styles.hideWhenPrinting}
+                className={classes.hideWhenPrinting}
               />
             </div>
           )}
@@ -56,20 +56,20 @@ const App: FC<{}> = () => {
           <Header
             personName="Daniel Ramos"
             role="Full-stack Developer"
-            className={styles.header}
+            className={classes.header}
           />
           <div>
-            <div className={styles.hspacer} />
-            <div className={styles.curriculumContainer}>
-              <div className={styles.vspacer} />
-              <Profile className={styles.profile} />
-              <div className={styles.middleSpacer} />
-              <Education className={styles.education} />
+            <div className={classes.hspacer} />
+            <div className={classes.curriculumContainer}>
+              <div className={classes.vspacer} />
+              <Profile className={classes.profile} />
+              <div className={classes.middleSpacer} />
+              <Education className={classes.education} />
               <ProfessionalExperience
-                className={styles.professionalExperience}
+                className={classes.professionalExperience}
               />
-              <Skills className={styles.skills} />
-              <Contact className={styles.contact} />
+              <Skills className={classes.skills} />
+              <Contact className={classes.contact} />
             </div>
           </div>
         </Sheet>

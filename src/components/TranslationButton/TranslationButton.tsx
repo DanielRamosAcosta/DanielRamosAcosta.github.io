@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 
-import styles from './TranslationButton.module.css'
+import classes from './TranslationButton.module.css'
 
 interface TranslationButtonProps {
   className?: string
@@ -12,7 +12,10 @@ export const TranslationButton: FC<TranslationButtonProps> = ({
   className,
   onClick,
 }) => (
-  <button onClick={onClick} className={classNames(styles.container, className)}>
+  <button
+    onClick={onClick}
+    className={classNames(classes.container, className)}
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

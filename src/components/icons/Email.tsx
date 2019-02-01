@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import styles from './generic-icon.module.css'
+import classes from './generic-icon.module.css'
 
 interface EmailIconProps {
   size?: number
@@ -9,7 +9,7 @@ interface EmailIconProps {
 
 export const EmailIcon: FC<EmailIconProps> = ({ size, color }) => (
   <svg
-    className={styles.container}
+    className={classes.container}
     width={size}
     aria-hidden="true"
     viewBox="0 0 512 512"

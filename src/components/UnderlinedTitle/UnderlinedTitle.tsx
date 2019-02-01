@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
-import styles from './UnderlinedTitle.module.css'
+import classes from './UnderlinedTitle.module.css'
 
 export const UnderlinedTitle: FC<{}> = ({ children }) => (
-  <div className={styles.realContainer}>
-    <h3 className={styles.container}>{children}</h3>
-    <hr className={styles.line} />
+  <div className={classes.realContainer}>
+    <h3 className={classes.container}>{children}</h3>
+    <hr className={classes.line} />
   </div>
 )

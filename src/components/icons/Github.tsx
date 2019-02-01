@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import styles from './generic-icon.module.css'
+import classes from './generic-icon.module.css'
 
 interface GithubIconProps {
   size?: number
@@ -9,7 +9,7 @@ interface GithubIconProps {
 
 export const GithubIcon: FC<GithubIconProps> = ({ size, color }) => (
   <svg
-    className={styles.container}
+    className={classes.container}
     aria-hidden="true"
     width={size}
     viewBox="0 0 496 496"

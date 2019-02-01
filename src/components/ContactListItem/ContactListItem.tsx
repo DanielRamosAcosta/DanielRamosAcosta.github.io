@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import styles from './ContactListItem.module.css'
+import classes from './ContactListItem.module.css'
 
 interface ContactListItemProps {
   icon: FC
@@ -13,8 +13,8 @@ export const ContactListItem: FC<ContactListItemProps> = ({
   text,
   link,
 }) => (
-  <li className={styles.innerList}>
-    <a href={link} target="_blank" rel="noopener" className={styles.link}>
+  <li className={classes.innerList}>
+    <a href={link} target="_blank" rel="noopener" className={classes.link}>
       <Icon />
       <span>{text}</span>
     </a>
