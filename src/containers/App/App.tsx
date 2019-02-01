@@ -6,8 +6,17 @@ import { ProfessionalExperience } from '../ProfessionalExperience'
 import { Profile } from '../Profile'
 import { Skills } from '../Skills'
 
+import {
+  LanguageProvider,
+  isSpanishContextDefaultValue,
+  Language,
+} from '../IsSpanishContext'
+
 import { Header } from '../../components/Header'
 import { Sheet } from '../../components/Sheet'
+// import { PrintButton } from '../../components/PrintButton'
+import { ButtonIconHOC } from '../../HOCs/ButtonIconHOC/ButtonIconHOC'
+import { TranslationIcon } from '../../components/icons/Translation'
 
 import '../../assets/styles/reset.css'
 
@@ -16,14 +25,10 @@ import '../../assets/fonts/Raleway/raleway.css'
 import '../../assets/styles/global.css'
 
 import classes from './App.module.css'
+import { PrintIcon } from '../../components/icons/Print'
 
-import {
-  LanguageProvider,
-  isSpanishContextDefaultValue,
-  Language,
-} from '../IsSpanishContext'
-import { TranslationButton } from '../../components/TranslationButton'
-import { PrintButton } from '../../components/PrintButton'
+const TranslationButton = ButtonIconHOC(TranslationIcon)
+const PrintButton = ButtonIconHOC(PrintIcon)
 
 const App: FC<{}> = () => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
@@ -37,6 +42,7 @@ const App: FC<{}> = () => {
           topContainerChildren={() => (
             <div className={classes.sheetTopContainer}>
               <TranslationButton
+                size={24}
                 onClick={() =>
                   setLanguage(
                     language === Language.Spanish
@@ -47,6 +53,7 @@ const App: FC<{}> = () => {
                 className={classes.hideWhenPrinting}
               />
               <PrintButton
+                size={24}
                 onClick={() => window.print()}
                 className={classes.hideWhenPrinting}
               />

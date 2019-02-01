@@ -1,1 +1,0 @@
-export { TranslationButton } from './TranslationButton'
