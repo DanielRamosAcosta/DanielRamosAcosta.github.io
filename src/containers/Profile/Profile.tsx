@@ -1,11 +1,9 @@
-import classNames from 'classnames'
 import React, { FC } from 'react'
 
 import { LanguageConsumer, Language } from '../IsSpanishContext'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { Paragraph } from '../../components/Paragraph/Paragraph'
 
-import classes from './Profile.module.css'
 import { i18n, languageIs } from '../../i18n'
 import { List } from '../../components/List/List'
 import { ListItem } from '../../components/List/ListItem'
@@ -117,7 +115,7 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
               </>
             )}
           </Paragraph>
-          <Paragraph className={classes.list}>
+          <Paragraph>
             {isSpanish ? (
               <>
                 A parte de estos aspectos técnicos, en ocasiones he impartido
