@@ -60,8 +60,16 @@
   }
 }
 
-.sheet {
-  padding: 30px;
+@media screen and (min-width: 1400px) {
+  .curriculumContainer {
+    grid-gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1940px) {
+  .curriculumContainer {
+    grid-gap: 30px;
+  }
 }
 
 .header {
@@ -109,6 +117,22 @@
 
 @media print {
   .middleSpacer {
-    height: 200px;
+    height: 250px;
+  }
+}
+
+.sheet {
+  padding: 30px;
+}
+
+@media screen and (min-width: 1400px) {
+  .sheet {
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1940px) {
+  .sheet {
+    padding: 65px;
   }
 }
