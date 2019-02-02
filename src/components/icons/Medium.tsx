@@ -22,6 +22,6 @@ export const MediumIcon: FC<MediumIconProps> = ({ size, color }) => (
 )
 
 MediumIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

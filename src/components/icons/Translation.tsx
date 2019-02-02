@@ -24,6 +24,6 @@ export const TranslationIcon: FC<TranslationIconProps> = ({ size, color }) => (
 )
 
 TranslationIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

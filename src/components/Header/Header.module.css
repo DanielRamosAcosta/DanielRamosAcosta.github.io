@@ -9,7 +9,7 @@
   letter-spacing: 7px;
   font-size: var(--font-size-h1);
   text-align: center;
-  color: var(--gray);
+  color: var(--gray-800);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -21,7 +21,7 @@
   letter-spacing: 7px;
   font-size: var(--font-size-h2);
   text-align: center;
-  color: var(--gray);
+  color: var(--gray-800);
   margin-bottom: 15px;
 }
 

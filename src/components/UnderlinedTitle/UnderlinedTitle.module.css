@@ -3,7 +3,7 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 7px;
-  color: var(--gray);
+  color: var(--gray-800);
   margin-top: 40px;
   font-size: 1.25rem;
 }
@@ -11,7 +11,7 @@
 .line {
   border: none;
   height: 1px;
-  background-color: #afafaf; /* TODO: Use palette */
+  background-color: var(--gray-400);
 }
 
 .realContainer {

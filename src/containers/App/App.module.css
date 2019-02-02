@@ -1,10 +1,10 @@
 .container {
   background: linear-gradient(
     135deg,
-    #bbbcbe 0%,
-    #9c9da1 50%,
-    #e2e3e5 50%,
-    #d1d5d8 100%
+    var(--gray-400) 0%,
+    var(--gray-500) 50%,
+    var(--gray-300) 50%,
+    var(--gray-300) 100%
   );
   min-height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@
 
 @media print {
   .container {
-    background-color: white;
+    background-color: var(--white);
     padding: 0;
   }
 }
@@ -100,7 +100,7 @@
   --gap: 20px;
   width: 1px;
   grid-area: vspacer;
-  background-color: #afafaf;
+  background-color: var(--gray-400);
   margin-left: calc(var(--gap) / 2);
   margin-right: calc(var(--gap) / 2);
 }
@@ -108,7 +108,7 @@
 .hspacer {
   grid-area: hspacer;
   height: 20px;
-  background-color: #f6f6f6;
+  background-color: var(--gray-100);
 }
 
 .middleSpacer {

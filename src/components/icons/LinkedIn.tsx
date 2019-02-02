@@ -22,6 +22,6 @@ export const LinkedInIcon: FC<LinkedInIconProps> = ({ size, color }) => (
 )
 
 LinkedInIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

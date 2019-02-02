@@ -22,6 +22,6 @@ export const LocationIcon: FC<LocationIconProps> = ({ size, color }) => (
 )
 
 LocationIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

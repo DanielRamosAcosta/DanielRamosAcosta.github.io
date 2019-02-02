@@ -22,6 +22,6 @@ export const EmailIcon: FC<EmailIconProps> = ({ size, color }) => (
 )
 
 EmailIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

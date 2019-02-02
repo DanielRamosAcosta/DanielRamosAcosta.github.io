@@ -6,7 +6,7 @@
 
 .container::before {
   content: '●';
-  color: var(--gray);
+  color: var(--gray-800);
   margin-right: 15px;
   font-size: 10px;
 }

@@ -24,6 +24,6 @@ export const PrintIcon: FC<PrintIconProps> = ({ size, color }) => (
 )
 
 PrintIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }

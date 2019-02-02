@@ -2,14 +2,14 @@
   font-family: OpenSans;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--gray-800);
   letter-spacing: 3px;
   font-size: 1rem;
   margin-top: 25px;
 }
 
 .companyAndDates {
-  color: var(--gray);
+  color: var(--gray-800);
   font-weight: 700;
   font-style: italic;
   font-size: 1.15rem;

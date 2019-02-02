@@ -1,11 +1,11 @@
 .container {
   max-width: var(--paper-width);
-  background-color: white;
+  background-color: var(--white);
 }
 
 .topSpcer {
   height: 45px;
-  background-color: var(--light-gray);
+  background-color: var(--gray-200);
 }
 
 .content {

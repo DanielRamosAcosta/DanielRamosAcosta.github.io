@@ -24,6 +24,6 @@ export const ShareIcon: FC<ShareIconProps> = ({ size, color }) => (
 )
 
 ShareIcon.defaultProps = {
-  color: 'var(--gray)',
+  color: 'var(--gray-800)',
   size: 20,
 }
