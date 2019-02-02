@@ -47,21 +47,25 @@ export const Contact: FC<ContactProps> = ({ className }) => (
               text="daniel.ramos@leanmind.es"
             />
             <ContactListItem
+              openInNewTab
               icon={CircleLocationIcon}
               link="https://www.google.es/maps/place/Tenerife"
               text={getLabel('tenerife_canary_islands')}
             />
             <ContactListItem
+              openInNewTab
               icon={CircleGithubIcon}
               link="https://github.com/DanielRamosAcosta"
               text="@DanielRamosAcosta"
             />
             <ContactListItem
+              openInNewTab
               icon={CircleLinkedInIcon}
               link="https://linkedin.com/in/danielramosacosta/"
               text="/in/DanielRamosAcosta"
             />
             <ContactListItem
+              openInNewTab
               icon={CircleMediumIcon}
               link="https://medium.com/@danielramosacosta"
               text="@danielramosacosta"
