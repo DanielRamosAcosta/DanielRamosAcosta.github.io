@@ -1,5 +1,5 @@
 .jobName {
-  font-family: OpenSans;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--gray-800);

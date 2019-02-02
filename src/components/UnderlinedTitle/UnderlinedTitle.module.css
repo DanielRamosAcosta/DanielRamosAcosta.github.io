@@ -1,5 +1,5 @@
-.container {
-  font-family: OpenSans;
+.title {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 7px;
@@ -14,7 +14,7 @@
   background-color: var(--gray-400);
 }
 
-.realContainer {
+.container {
   /* TODO: Fix classes */
   margin-bottom: 20px;
 }
