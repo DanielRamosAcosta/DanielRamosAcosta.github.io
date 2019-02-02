@@ -5,6 +5,7 @@ import classes from './ButtonIconHOC.module.css'
 
 interface ButtonIconHOCProps {
   className?: string
+  label: string
   onClick: () => void
 }
 
@@ -14,6 +15,7 @@ export const ButtonIconHOC = <T extends object>(WrappedComponent: FC<T>) => {
   ) => (
     <button
       onClick={props.onClick}
+      aria-label={props.label}
       className={classNames(classes.container, props.className)}
     >
       <WrappedComponent {...props} />

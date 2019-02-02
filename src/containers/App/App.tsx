@@ -41,6 +41,7 @@ const App: FC<{}> = () => {
           topContainerChildren={() => (
             <div className={classes.sheetTopContainer}>
               <TranslationButton
+                label="Switch between Spanish or English"
                 size={24}
                 onClick={() =>
                   setLanguage(
@@ -52,6 +53,7 @@ const App: FC<{}> = () => {
                 className={classes.hideWhenPrinting}
               />
               <PrintButton
+                label="Print the page"
                 size={24}
                 onClick={() => window.print()}
                 className={classes.hideWhenPrinting}
