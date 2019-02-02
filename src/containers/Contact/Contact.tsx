@@ -10,6 +10,7 @@ import { CircleIconHOC } from '../../HOCs/CircleIconHOC/CircleIconHOC'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
+import { List } from '../../components/List/List'
 
 const CircleEmailIcon = CircleIconHOC(EmailIcon)
 const CircleGithubIcon = CircleIconHOC(GithubIcon)
@@ -39,37 +40,33 @@ export const Contact: FC<ContactProps> = ({ className }) => (
       return (
         <section className={className}>
           <UnderlinedTitle>{getLabel('contact')}</UnderlinedTitle>
-          <ul>
+          <List>
             <ContactListItem
               icon={CircleEmailIcon}
               link="mailto:daniel.ramos@leanmind.es"
               text="daniel.ramos@leanmind.es"
             />
-            <div style={{ width: 10, height: 10 }} />
             <ContactListItem
               icon={CircleLocationIcon}
               link="https://www.google.es/maps/place/Tenerife"
               text={getLabel('tenerife_canary_islands')}
             />
-            <div style={{ width: 10, height: 10 }} />
             <ContactListItem
               icon={CircleGithubIcon}
               link="https://github.com/DanielRamosAcosta"
               text="@DanielRamosAcosta"
             />
-            <div style={{ width: 10, height: 10 }} />
             <ContactListItem
               icon={CircleLinkedInIcon}
               link="https://linkedin.com/in/danielramosacosta/"
               text="/in/DanielRamosAcosta"
             />
-            <div style={{ width: 10, height: 10 }} />
             <ContactListItem
               icon={CircleMediumIcon}
               link="https://medium.com/@danielramosacosta"
               text="@danielramosacosta"
             />
-          </ul>
+          </List>
         </section>
       )
     }}
