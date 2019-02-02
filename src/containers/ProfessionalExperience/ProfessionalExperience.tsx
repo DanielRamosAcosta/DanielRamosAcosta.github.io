@@ -6,6 +6,8 @@ import { Paragraph } from '../../components/Paragraph/Paragraph'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { LanguageConsumer, Language } from '../IsSpanishContext'
 import { languageIs, i18n } from '../../i18n'
+import { ListItem } from '../../components/List/ListItem'
+import { List } from '../../components/List/List'
 
 interface ProfessionalExperienceProps {
   className?: string
@@ -92,51 +94,49 @@ export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
             <div>
               {isSpanish ? (
                 <>
-                  <ul>
-                    <li>
-                      <b>Yogabot</b>: Un entrenador inteligente de Yoga usando
-                      IA (en concreto, Detectron de Facebook) para analizar tu
-                      cuerpo y recomendarte ejercicios de Yoga que se ajusten a
-                      ti.
-                    </li>
-                    <li>
-                      <b>Blockchain POC</b>: Un sistema para subir ofertas a
-                      licitaciones que se hashean y persisten en la blockchain
-                      de Ethereum. Esto es para que el hash sea público e
-                      inmutable, pero que el documento original se mantenga
-                      privado, ya que no se puede obtener el documento original
-                      a partir del hash.
-                    </li>
-                    <li>
-                      <b>AI Document Classification POC</b>: Un sistema de
-                      inteligencia artificial que recupera documentos de la base
-                      de datos del cliente, y los ordena en distintas categorías
-                      usando Redes Neuronales Profundas con Tensorflow.
-                    </li>
-                  </ul>
+                  <List>
+                    <ListItem title="Yogabot">
+                      Un entrenador inteligente de Yoga usando IA (en concreto,
+                      Detectron de Facebook) para analizar tu cuerpo y
+                      recomendarte ejercicios de Yoga que se ajusten a ti.
+                    </ListItem>
+                    <ListItem title="Blockchain POC">
+                      Un sistema para subir ofertas a licitaciones que se
+                      hashean y persisten en la blockchain de Ethereum. Esto es
+                      para que el hash sea público e inmutable, pero que el
+                      documento original se mantenga privado, ya que no se puede
+                      obtener el documento original a partir del hash.
+                    </ListItem>
+                    <ListItem title="AI Document Classification POC">
+                      Un sistema de inteligencia artificial que recupera
+                      documentos de la base de datos del cliente, y los ordena
+                      en distintas categorías usando Redes Neuronales Profundas
+                      con Tensorflow.
+                    </ListItem>
+                  </List>
                 </>
               ) : (
                 <>
-                  <ul>
-                    <li>
-                      <b>Yogabot</b>: A smart Yoga trainer using AI
-                      (specifically, Facebook's Detectron) to analyze your body
-                      and recommend specific Yoga exercises
-                    </li>
-                    <li>
-                      <b>Blockchain POC</b>: A system for uploading offers for
-                      litications that are hashed and persisted in Ethereum
-                      Blockchain. This is for letting the hash be inmutable and
-                      public, but let the original document private as no one
-                      can retrieve it from the hash.
-                    </li>
-                    <li>
-                      <b>AI Document Classification POC</b>: An Artificial
-                      Intelligence system that retrieves several documents from
-                      the clients' database, and sorts them into several
-                      categories using Tensorflow's Deep Neural Networks.
-                    </li>
-                  </ul>
+                  <List>
+                    <ListItem title="Yogabot">
+                      A smart Yoga trainer using AI (specifically, Facebook's
+                      Detectron) to analyze your body and recommend specific
+                      Yoga exercises
+                    </ListItem>
+                    <ListItem title="Blockchain POC">
+                      A system for uploading offers for litications that are
+                      hashed and persisted in Ethereum Blockchain. This is for
+                      letting the hash be inmutable and public, but let the
+                      original document private as no one can retrieve it from
+                      the hash.
+                    </ListItem>
+                    <ListItem title="AI Document Classification POC">
+                      An Artificial Intelligence system that retrieves several
+                      documents from the clients' database, and sorts them into
+                      several categories using Tensorflow's Deep Neural
+                      Networks.
+                    </ListItem>
+                  </List>
                 </>
               )}
             </div>

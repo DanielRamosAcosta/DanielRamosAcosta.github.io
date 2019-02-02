@@ -7,6 +7,8 @@ import { Paragraph } from '../../components/Paragraph/Paragraph'
 
 import classes from './Profile.module.css'
 import { i18n, languageIs } from '../../i18n'
+import { List } from '../../components/List/List'
+import { ListItem } from '../../components/List/ListItem'
 
 interface ProfileProps {
   className?: string
@@ -14,10 +16,24 @@ interface ProfileProps {
 
 const englishLang = {
   profile: 'Profile',
+  '2017_03_at_open_canarias': '2017-03 at Open Canarias',
+  javascript_css_react_and_redux: 'Javascript, CSS, React and Redux',
+  '2018_07_at_open_canarias': '2018-07 at Open Canarias',
+  javascript_in_2018_and_react_best_practices:
+    'Javascript in 2018 and React best practices',
+  '2018_08_at_kairos': '2018-08 at Kairos',
+  javascript_oop_fp: 'Javascript, OOP, FP',
 }
 
 const spanishLang: typeof englishLang = {
   profile: 'Perfil',
+  '2017_03_at_open_canarias': '2017-03 en Open Canarias',
+  javascript_css_react_and_redux: 'Javascript, CSS, React y Redux',
+  '2018_07_at_open_canarias': '2018-07 en Open Canarias',
+  javascript_in_2018_and_react_best_practices:
+    'Javascript en 2018 y Mejores Prácticas en React',
+  '2018_08_at_kairos': '2018-08 en Kairos',
+  javascript_oop_fp: 'Javascript, OOP, FP',
 }
 
 export const Profile: FC<ProfileProps> = ({ className }) => (
@@ -106,54 +122,25 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
               <>
                 A parte de estos aspectos técnicos, en ocasiones he impartido
                 formaciones:
-                <ul>
-                  <li>
-                    <b>
-                      <i>2017-03 en Open Canarias</i>
-                    </b>
-                    : Javascript, CSS, React y Redux
-                  </li>
-                  <li>
-                    <b>
-                      <i>2018-07 en Open Canarias</i>
-                    </b>
-                    : Javascript en 2018 y Mejores Prácticas en React
-                  </li>
-                  <li>
-                    <b>
-                      <i>2018-08 en Kairos</i>
-                    </b>
-                    : Javascript, OOP, FP
-                  </li>
-                </ul>
               </>
             ) : (
               <>
                 Apart from these technical aspects, I do formations from time to
                 time:
-                <ul>
-                  <li>
-                    <b>
-                      <i>2017-03 at Open Canarias</i>
-                    </b>
-                    : Javascript, CSS, React and Redux
-                  </li>
-                  <li>
-                    <b>
-                      <i>2018-07 at Open Canarias</i>
-                    </b>
-                    : Javascript in 2018 and React best practices
-                  </li>
-                  <li>
-                    <b>
-                      <i>2018-08 at Kairos</i>
-                    </b>
-                    : Javascript, OOP, FP
-                  </li>
-                </ul>
               </>
             )}
           </Paragraph>
+          <List>
+            <ListItem title={getLabel('2017_03_at_open_canarias')}>
+              {getLabel('javascript_css_react_and_redux')}
+            </ListItem>
+            <ListItem title={getLabel('2018_07_at_open_canarias')}>
+              {getLabel('javascript_in_2018_and_react_best_practices')}
+            </ListItem>
+            <ListItem title={getLabel('2018_08_at_kairos')}>
+              {getLabel('javascript_oop_fp')}
+            </ListItem>
+          </List>
         </section>
       )
     }}
