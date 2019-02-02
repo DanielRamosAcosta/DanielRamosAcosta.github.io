@@ -5,14 +5,16 @@
   letter-spacing: 7px;
   color: var(--gray);
   margin-top: 40px;
+  font-size: 1.25rem;
 }
 
 .line {
   border: none;
   height: 1px;
-  background-color: #afafaf;
+  background-color: #afafaf; /* TODO: Use palette */
 }
 
 .realContainer {
+  /* TODO: Fix classes */
   margin-bottom: 20px;
 }

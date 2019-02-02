@@ -4,7 +4,7 @@
   text-transform: uppercase;
   color: var(--gray);
   letter-spacing: 3px;
-  font-size: 13px;
+  font-size: 1rem;
   margin-top: 25px;
 }
 
@@ -12,34 +12,11 @@
   color: var(--gray);
   font-weight: 700;
   font-style: italic;
-  font-size: 15px;
+  font-size: 1.15rem;
   margin-top: 7px;
   margin-bottom: 5px;
 }
-/*
-.content {
-  font-size: 13px;
-  line-height: 20px;
-  font-family: Raleway;
-}
 
-.content ul li {
-  margin-left: 40px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-.content ul li::before {
-  content: '●';
-  color: var(--gray);
-  margin-right: 15px;
-  font-size: 10px;
-  position: absolute;
-  left: -20px;
-}
-
-*/
 .spacer {
   --margin: 6px;
   margin-left: var(--margin);

@@ -14,7 +14,7 @@ interface HeaderProps {
 export const Header: FC<HeaderProps> = ({ className, personName, role }) => (
   <header className={classNames(classes.container, className)}>
     <h1 className={classes.personName}>{personName}</h1>
-    <p className={classes.role}>{role}</p>
+    <h2 className={classes.role}>{role}</h2>
     <img className={classes.logo} src={logo} alt="Lean Mind" />
   </header>
 )

@@ -22,6 +22,14 @@ b {
 }
 
 :root {
+  --font-size-default: 13px;
+
+  --font-size-h1: 60px;
+  --font-size-h2: 16px;
+  --font-size-h3: 1.25rem;
+  --font-size: 13px;
+  font-size: var(--font-size);
+
   --gray: #4a4a4a;
   --light-gray: #eaeaea;
   --lighter-gray: #f3f3f3;

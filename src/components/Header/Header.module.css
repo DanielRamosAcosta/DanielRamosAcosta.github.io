@@ -7,7 +7,7 @@
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 7px;
-  font-size: 60px;
+  font-size: var(--font-size-h1);
   text-align: center;
   color: var(--gray);
   margin-top: 20px;
@@ -19,7 +19,7 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 7px;
-  font-size: 16px;
+  font-size: var(--font-size-h2);
   text-align: center;
   color: var(--gray);
   margin-bottom: 15px;
