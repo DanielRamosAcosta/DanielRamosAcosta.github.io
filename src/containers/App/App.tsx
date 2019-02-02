@@ -9,14 +9,10 @@ import { Skills } from '../Skills/Skills'
 import {
   LanguageProvider,
   isSpanishContextDefaultValue,
-  Language,
 } from '../IsSpanishContext'
 
 import { Header } from '../../components/Header/Header'
 import { Sheet } from '../../components/Sheet/Sheet'
-import { TranslationIcon } from '../../components/icons/Translation'
-import { PrintIcon } from '../../components/icons/Print'
-import { ButtonIconHOC } from '../../HOCs/ButtonIconHOC/ButtonIconHOC'
 
 import '../../assets/styles/reset.css'
 
@@ -25,9 +21,7 @@ import '../../assets/fonts/Raleway/raleway.css'
 import '../../assets/styles/global.css'
 
 import classes from './App.module.css'
-
-const TranslationButton = ButtonIconHOC(TranslationIcon)
-const PrintButton = ButtonIconHOC(PrintIcon)
+import { ButtonHeader } from '../ButtonsHeader/ButtonsHeader'
 
 const App: FC<{}> = () => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
@@ -39,26 +33,7 @@ const App: FC<{}> = () => {
           className={classes.sheet}
           containerClass={classes.sheetContainer}
           topContainerChildren={() => (
-            <div className={classes.sheetTopContainer}>
-              <TranslationButton
-                label="Switch between Spanish or English"
-                size={24}
-                onClick={() =>
-                  setLanguage(
-                    language === Language.Spanish
-                      ? Language.English
-                      : Language.Spanish,
-                  )
-                }
-                className={classes.hideWhenPrinting}
-              />
-              <PrintButton
-                label="Print the page"
-                size={24}
-                onClick={() => window.print()}
-                className={classes.hideWhenPrinting}
-              />
-            </div>
+            <ButtonHeader setLanguage={setLanguage} />
           )}
         >
           <Header

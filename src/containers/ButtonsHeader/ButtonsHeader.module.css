@@ -1,0 +1,13 @@
+.buttonsHeader {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+@media print {
+  .hideWhenPrinting {
+    display: none !important;
+  }
+}
