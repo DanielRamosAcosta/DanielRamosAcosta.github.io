@@ -7,6 +7,7 @@ import { Paragraph } from '../../components/Paragraph/Paragraph'
 import { i18n, languageIs } from '../../i18n'
 import { List } from '../../components/List/List'
 import { ListItem } from '../../components/List/ListItem'
+import { Link } from '../../components/Link/Link'
 
 interface ProfileProps {
   className?: string
@@ -138,6 +139,34 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
             <ListItem title={getLabel('2018_08_at_kairos')}>
               {getLabel('javascript_oop_fp')}
             </ListItem>
+            <Paragraph>
+              {isSpanish ? (
+                <>
+                  Me gusta realizar actividades de divulgación
+                  tecnológica/científica, ya sea dando charlas o por otros
+                  medios como{' '}
+                  <Link
+                    href="https://www.youtube.com/channel/UCiLWrFqdr20VGV9ZISqaJeg"
+                    openInNewTab
+                  >
+                    Youtube
+                  </Link>
+                  .
+                </>
+              ) : (
+                <>
+                  I like to carry out technological/scientific divulgation
+                  activities, either giving talks or by other means such as{' '}
+                  <Link
+                    href="https://www.youtube.com/channel/UCiLWrFqdr20VGV9ZISqaJeg"
+                    openInNewTab
+                  >
+                    Youtube
+                  </Link>
+                  .
+                </>
+              )}
+            </Paragraph>
           </List>
         </section>
       )
