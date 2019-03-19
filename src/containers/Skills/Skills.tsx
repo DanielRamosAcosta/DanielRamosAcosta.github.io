@@ -36,6 +36,7 @@ export const Skills: FC<SkillsProps> = ({ className }) => (
             <SkillListItem>Javacript</SkillListItem>
             <SkillListItem>Scala</SkillListItem>
             <SkillListItem>Go</SkillListItem>
+            <SkillListItem>C#</SkillListItem>
             <SkillListItem>Elixir</SkillListItem>
             <SkillListItem>Functional Programming</SkillListItem>
             <SkillListItem>Docker</SkillListItem>
