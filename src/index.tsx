@@ -2,6 +2,7 @@ import React from 'react'
 import { render, hydrate } from 'react-dom'
 import './index.css'
 import App from './containers/App/App'
+import { fixVerticalSpaceForBrowser } from './utils/fix-spacer-for-browser'
 import * as serviceWorker from './serviceWorker'
 
 const isLocalhost =
@@ -20,6 +21,8 @@ if (rootElement.hasChildNodes()) {
 } else {
   render(<App />, rootElement)
 }
+
+fixVerticalSpaceForBrowser()
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
