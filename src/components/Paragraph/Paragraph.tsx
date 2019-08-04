@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 import classes from './Paragraph.module.css'
 
-interface ParagraphProps {
+type ParagraphProps = {
   className?: string
 }
 

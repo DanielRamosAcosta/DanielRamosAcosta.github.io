@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 import classes from './Link.module.css'
 
-interface LinkProps {
+type LinkProps = {
   className?: string
   href?: string
   openInNewTab?: boolean

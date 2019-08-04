@@ -5,7 +5,7 @@ import { Text } from '../Text/Text'
 
 import classes from './ListItem.module.css'
 
-interface ListItemProps {
+type ListItemProps = {
   className?: string
   title: string
 }

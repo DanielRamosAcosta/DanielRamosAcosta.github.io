@@ -2,6 +2,8 @@
 
 [danielramos.me](https://danielramos.me)
 
+Also my tech playground :)
+
 ## Features
 
 -   React

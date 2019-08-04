@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 import classes from './Text.module.css'
 
-interface TextProps {
+type TextProps = {
   className?: string
 }
 

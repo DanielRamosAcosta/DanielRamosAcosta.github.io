@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './EducationPhase.module.css'
 
-interface EducationPhaseProps {
+type EducationPhaseProps = {
   startDate: Date
   endDate: Date
   educationName: string
@@ -15,11 +15,11 @@ export const EducationPhase: FC<EducationPhaseProps> = ({
   educationName,
   universityName,
 }) => (
-  <div>
-    <p className={classes.educationName}>{educationName}</p>
-    <p className={classes.universityName}>{universityName}</p>
-    <p className={classes.dateRange}>
-      {startDate.getFullYear()} - {endDate.getFullYear()}
-    </p>
-  </div>
-)
+    <div>
+      <p className={classes.educationName}>{educationName}</p>
+      <p className={classes.universityName}>{universityName}</p>
+      <p className={classes.dateRange}>
+        {startDate.getFullYear()} - {endDate.getFullYear()}
+      </p>
+    </div>
+  )

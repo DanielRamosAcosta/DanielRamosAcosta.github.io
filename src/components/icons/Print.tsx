@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './generic-icon.module.css'
 
-interface PrintIconProps {
+type PrintIconProps = {
   size?: number
   color?: string
 }

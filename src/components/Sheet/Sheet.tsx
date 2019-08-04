@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 import classes from './Sheet.module.css'
 
-interface SheetProps {
+type SheetProps = {
   containerClass?: string
   className?: string
   topContainerChildren: FC
@@ -15,10 +15,10 @@ export const Sheet: FC<SheetProps> = ({
   children,
   topContainerChildren: TopContainerChildren,
 }) => (
-  <main className={classNames(classes.container, containerClass)}>
-    <div className={classes.topSpcer}>
-      <TopContainerChildren />
-    </div>
-    <div className={classNames(classes.content, className)}>{children}</div>
-  </main>
-)
+    <main className={classNames(classes.container, containerClass)}>
+      <div className={classes.topSpcer}>
+        <TopContainerChildren />
+      </div>
+      <div className={classNames(classes.content, className)}>{children}</div>
+    </main>
+  )

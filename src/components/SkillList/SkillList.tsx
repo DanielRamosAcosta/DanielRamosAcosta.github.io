@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './SkillList.module.css'
 
-interface SkillListProps {
+type SkillListProps = {
   title: string
 }
 

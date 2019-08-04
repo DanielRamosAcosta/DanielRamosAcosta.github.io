@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './generic-icon.module.css'
 
-interface ShareIconProps {
+type ShareIconProps = {
   size?: number
   color?: string
 }

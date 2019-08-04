@@ -18,7 +18,7 @@ const CircleLinkedInIcon = CircleIconHOC(LinkedInIcon)
 const CircleLocationIcon = CircleIconHOC(LocationIcon)
 const CircleMediumIcon = CircleIconHOC(MediumIcon)
 
-interface ContactProps {
+type ContactProps = {
   className?: string
 }
 

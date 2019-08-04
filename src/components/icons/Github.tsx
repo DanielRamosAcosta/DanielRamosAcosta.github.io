@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './generic-icon.module.css'
 
-interface GithubIconProps {
+type GithubIconProps = {
   size?: number
   color?: string
 }

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './ContactListItem.module.css'
 
-interface ContactListItemProps {
+type ContactListItemProps = {
   icon: FC
   text: string
   link: string
@@ -15,15 +15,15 @@ export const ContactListItem: FC<ContactListItemProps> = ({
   link,
   openInNewTab,
 }) => (
-  <li className={classes.innerList}>
-    <a
-      href={link}
-      className={classes.link}
-      target={openInNewTab ? '_blank' : undefined}
-      rel={openInNewTab ? 'noopener' : undefined}
-    >
-      <Icon />
-      <span>{text}</span>
-    </a>
-  </li>
-)
+    <li className={classes.innerList}>
+      <a
+        href={link}
+        className={classes.link}
+        target={openInNewTab ? '_blank' : undefined}
+        rel={openInNewTab ? 'noopener' : undefined}
+      >
+        <Icon />
+        <span>{text}</span>
+      </a>
+    </li>
+  )

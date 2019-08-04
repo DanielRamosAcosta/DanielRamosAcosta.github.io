@@ -5,7 +5,7 @@ import classes from './Header.module.css'
 
 import logo from './leanmind-logo.svg'
 
-interface HeaderProps {
+type HeaderProps = {
   personName: string
   role: string
   className?: string

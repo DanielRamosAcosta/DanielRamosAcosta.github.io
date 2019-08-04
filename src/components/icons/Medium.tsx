@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import classes from './generic-icon.module.css'
 
-interface MediumIconProps {
+type MediumIconProps = {
   size?: number
   color?: string
 }

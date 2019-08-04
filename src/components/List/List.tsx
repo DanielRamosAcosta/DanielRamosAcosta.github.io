@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 import classes from './List.module.css'
 
-interface ListProps {
+type ListProps = {
   className?: string
 }
 

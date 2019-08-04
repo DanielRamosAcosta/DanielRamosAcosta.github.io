@@ -6,7 +6,7 @@ import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitl
 import { LanguageConsumer } from '../IsSpanishContext'
 import { i18n } from '../../i18n'
 
-interface EducationProps {
+type EducationProps = {
   className?: string
 }
 

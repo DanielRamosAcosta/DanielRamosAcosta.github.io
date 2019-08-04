@@ -9,7 +9,7 @@ import { List } from '../../components/List/List'
 import { ListItem } from '../../components/List/ListItem'
 import { Link } from '../../components/Link/Link'
 
-interface ProfileProps {
+type ProfileProps = {
   className?: string
 }
 
@@ -53,13 +53,13 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                 conocimiento con otros y aprendiendo de ellos.
               </>
             ) : (
-              <>
-                My name is <b>Daniel Ramos</b>, I'm a full-stack developer and
-                technology enthusiast. I'm in love with Javascript and
-                functional programming. I enjoy sharing my knowledge with others
-                and learning from them.
+                <>
+                  My name is <b>Daniel Ramos</b>, I'm a full-stack developer and
+                  technology enthusiast. I'm in love with Javascript and
+                  functional programming. I enjoy sharing my knowledge with others
+                  and learning from them.
               </>
-            )}
+              )}
           </Paragraph>
           <Paragraph>
             {isSpanish ? (
@@ -72,14 +72,14 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                 usar en proyectos reales.
               </>
             ) : (
-              <>
-                At the backend, I have worked mainly with <b>Node.js</b> and
-                Swagger, using it to create RESTful APIs. Occasionally I have
+                <>
+                  At the backend, I have worked mainly with <b>Node.js</b> and
+                  Swagger, using it to create RESTful APIs. Occasionally I have
                 developed some microservices using <b>Scala and Akka Streams</b>
-                . I have learned Elixir an Go to create backend services, but I
-                still haven't used them in real-world projects.
+                  . I have learned Elixir an Go to create backend services, but I
+                  still haven't used them in real-world projects.
               </>
-            )}
+              )}
           </Paragraph>
           <Paragraph>
             {isSpanish ? (
@@ -90,12 +90,12 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                 próximo.
               </>
             ) : (
-              <>
-                At the frontend, I use <b>React {'&'} Redux</b> to create web
-                apps and native apps, but I would like to learn Angular and Vue
-                in the future.
+                <>
+                  At the frontend, I use <b>React {'&'} Redux</b> to create web
+                  apps and native apps, but I would like to learn Angular and Vue
+                  in the future.
               </>
-            )}
+              )}
           </Paragraph>
           <Paragraph>
             {isSpanish ? (
@@ -107,14 +107,14 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                 <b>Google Kubernetes Engine</b>.
               </>
             ) : (
-              <>
-                In the sysadmin world, I have advanced knowledge of Docker and
+                <>
+                  In the sysadmin world, I have advanced knowledge of Docker and
                 Kubernetes. In the last year, I have deployed containers in{' '}
-                <b>Amazon Web Services</b> but I have also used other cloud
+                  <b>Amazon Web Services</b> but I have also used other cloud
                 proviers and services, specially <b>Google Kubernetes Engine</b>
-                .
+                  .
               </>
-            )}
+              )}
           </Paragraph>
           <Paragraph>
             {isSpanish ? (
@@ -123,11 +123,11 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                 formaciones:
               </>
             ) : (
-              <>
-                Apart from these technical aspects, I do formations from time to
-                time:
+                <>
+                  Apart from these technical aspects, I do formations from time to
+                  time:
               </>
-            )}
+              )}
           </Paragraph>
           <List>
             <ListItem title={getLabel('2017_03_at_open_canarias')}>
@@ -154,18 +154,18 @@ export const Profile: FC<ProfileProps> = ({ className }) => (
                   .
                 </>
               ) : (
-                <>
-                  I like to carry out technological/scientific divulgation
+                  <>
+                    I like to carry out technological/scientific divulgation
                   activities, either giving talks or by other means such as{' '}
-                  <Link
-                    href="https://www.youtube.com/channel/UCiLWrFqdr20VGV9ZISqaJeg"
-                    openInNewTab
-                  >
-                    Youtube
+                    <Link
+                      href="https://www.youtube.com/channel/UCiLWrFqdr20VGV9ZISqaJeg"
+                      openInNewTab
+                    >
+                      Youtube
                   </Link>
-                  .
+                    .
                 </>
-              )}
+                )}
             </Paragraph>
           </List>
         </section>
