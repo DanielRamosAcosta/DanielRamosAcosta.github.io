@@ -9,11 +9,18 @@ type LinkProps = {
   openInNewTab?: boolean
 }
 
-export const Link: FC<LinkProps> = ({ className, openInNewTab, ...props }) => (
+export const Link: FC<LinkProps> = ({
+  className,
+  openInNewTab,
+  children,
+  ...props
+}) => (
   <a
     className={classNames(classes.link, className)}
     target={openInNewTab ? '_blank' : undefined}
     rel={openInNewTab ? 'noopener' : undefined}
     {...props}
-  />
+  >
+    {children}
+  </a>
 )

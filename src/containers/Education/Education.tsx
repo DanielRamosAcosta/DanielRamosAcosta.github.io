@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import React, { FC } from 'react'
 
 import { EducationPhase } from '../../components/EducationPhase/EducationPhase'
