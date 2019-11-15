@@ -38,7 +38,7 @@ const App: FC<{}> = () => {
         >
           <Header
             personName="Daniel Ramos"
-            role="Full-stack Developer"
+            role="Lead Software Developer"
             className={classes.header}
           />
           <div>
