@@ -6,6 +6,7 @@ Also my tech playground :)
 
 ## Features
 
+-   CRA 3.3.0
 -   React
 -   CSS Grid
 -   Responsive
