@@ -117,7 +117,7 @@
 
 @media print {
   .middleSpacer {
-    height: var(--spacer-height);
+    /* height: var(--spacer-height); */
   }
 }
 
