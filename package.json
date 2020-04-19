@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://www.danielramos.me",
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
     "@types/classnames": "^2.2.10",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
@@ -11,6 +12,7 @@
     "classnames": "^2.2.6",
     "express": "^4.17.1",
     "gh-pages": "^2.2.0",
+    "next": "^9.3.5",
     "puppeteer": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -19,12 +21,11 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
     "pdf": "node scripts/pdf.js",
-    "postbuild": "react-snap",
     "deploy": "gh-pages -d build -b master"
   },
   "eslintConfig": {
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4"
   }
 }

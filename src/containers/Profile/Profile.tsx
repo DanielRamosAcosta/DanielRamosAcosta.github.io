@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { LanguageConsumer, Language } from '../IsSpanishContext'
+import { LanguageConsumer, Language } from '../../context/IsSpanishContext'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { Paragraph } from '../../components/Paragraph/Paragraph'
 
@@ -35,7 +35,7 @@ const spanishLang: typeof englishLang = {
 
 export const Profile: FC<ProfileProps> = ({ className }) => (
   <LanguageConsumer>
-    {language => {
+    {(language) => {
       const getLabel = i18n(language, { englishLang, spanishLang })
       const isSpanish = languageIs(language, Language.Spanish)
 

@@ -8,7 +8,7 @@ import { ShareIcon } from '../../components/icons/Share'
 import { browserSupportsWebShareAPI } from '../../utils/web-share-api'
 
 import { i18n } from '../../i18n'
-import { LanguageConsumer, Language } from '../IsSpanishContext'
+import { LanguageConsumer, Language } from '../../context/IsSpanishContext'
 
 import classes from './ButtonsHeader.module.css'
 
@@ -17,15 +17,13 @@ const PrintButton = ButtonIconHOC(PrintIcon)
 const ShareButton = ButtonIconHOC(ShareIcon)
 
 const englishLang = {
-  switch_language_between_spanish_or_english:
-    'Switch language between spanish or english',
+  switch_language_between_spanish_or_english: 'Switch language between spanish or english',
   print_or_export_in_pdf: 'Print or export in PDF',
   share: 'Share',
 }
 
 const spanishLang: typeof englishLang = {
-  switch_language_between_spanish_or_english:
-    'Cambiar idioma entre inglés y español',
+  switch_language_between_spanish_or_english: 'Cambiar idioma entre inglés y español',
   print_or_export_in_pdf: 'Print or export in PDF',
   share: 'Compartir',
 }
@@ -44,11 +42,9 @@ function share() {
   }
 }
 
-export const ButtonHeader: FC<{ setLanguage: Function }> = ({
-  setLanguage,
-}) => (
+export const ButtonHeader: FC<{ setLanguage: Function }> = ({ setLanguage }) => (
   <LanguageConsumer>
-    {language => {
+    {(language) => {
       const getLabel = i18n(language, { englishLang, spanishLang })
 
       return (
@@ -57,11 +53,7 @@ export const ButtonHeader: FC<{ setLanguage: Function }> = ({
             label={getLabel('switch_language_between_spanish_or_english')}
             size={24}
             onClick={() =>
-              setLanguage(
-                language === Language.Spanish
-                  ? Language.English
-                  : Language.Spanish,
-              )
+              setLanguage(language === Language.Spanish ? Language.English : Language.Spanish)
             }
             className={classes.hideWhenPrinting}
           />
@@ -71,7 +63,7 @@ export const ButtonHeader: FC<{ setLanguage: Function }> = ({
             onClick={print}
             className={classes.hideWhenPrinting}
           />
-          {browserSupportsWebShareAPI(window.navigator) && (
+          {typeof window !== 'undefined' && browserSupportsWebShareAPI(window.navigator) && (
             <ShareButton
               label={getLabel('share')}
               size={24}

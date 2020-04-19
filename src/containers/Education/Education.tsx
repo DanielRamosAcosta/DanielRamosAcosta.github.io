@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import { EducationPhase } from '../../components/EducationPhase/EducationPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
-import { LanguageConsumer } from '../IsSpanishContext'
+import { LanguageConsumer } from '../../context/IsSpanishContext'
 import { i18n } from '../../i18n'
 
 type EducationProps = {
@@ -23,7 +23,7 @@ const spanishLang: typeof englishLang = {
 
 export const Education: FC<EducationProps> = ({ className }) => (
   <LanguageConsumer>
-    {lang => {
+    {(lang) => {
       const getLabel = i18n(lang, { englishLang, spanishLang })
 
       return (

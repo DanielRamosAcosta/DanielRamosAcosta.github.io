@@ -1,4 +1,4 @@
-import { Language } from './containers/IsSpanishContext'
+import { Language } from './context/IsSpanishContext'
 
 export function i18n<T>(
   isSpanish: Language,
@@ -10,14 +10,11 @@ export function i18n<T>(
     spanishLang: T
   },
 ) {
-  return function(key: keyof T) {
+  return function (key: keyof T) {
     return isSpanish === Language.Spanish ? spanishLang[key] : englishLang[key]
   }
 }
 
-export function languageIs(
-  currentLanguage: Language,
-  expectedLanguage: Language,
-) {
+export function languageIs(currentLanguage: Language, expectedLanguage: Language) {
   return currentLanguage === expectedLanguage
 }

@@ -1,0 +1,34 @@
+.container {
+  --margin: 10px;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+.container p {
+  margin-bottom: var(--margin);
+  margin-top: var(--margin);
+}
+
+.container ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+.container li {
+  margin-left: 40px;
+  position: relative;
+}
+
+.container li::before {
+  content: '●';
+  color: var(--gray-800);
+  font-size: 10px;
+  position: absolute;
+  left: -20px;
+  line-height: 1.55rem;
+}
+
+.container a {
+  color: var(--black);
+}

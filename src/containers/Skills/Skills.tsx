@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { SkillList } from '../../components/SkillList/SkillList'
 import { SkillListItem } from '../../components/SkillListItem/SkillListItem'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
-import { LanguageConsumer } from '../IsSpanishContext'
+import { LanguageConsumer } from '../../context/IsSpanishContext'
 import { i18n } from '../../i18n'
 
 type SkillsProps = {
@@ -20,7 +20,7 @@ const spanishLang: typeof englishLang = {
 
 export const Skills: FC<SkillsProps> = ({ className }) => (
   <LanguageConsumer>
-    {language => {
+    {(language) => {
       const getLabel = i18n(language, { englishLang, spanishLang })
 
       return (

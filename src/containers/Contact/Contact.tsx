@@ -8,7 +8,7 @@ import { LocationIcon } from '../../components/icons/Location'
 import { MediumIcon } from '../../components/icons/Medium'
 import { CircleIconHOC } from '../../HOCs/CircleIconHOC/CircleIconHOC'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
-import { LanguageConsumer } from '../IsSpanishContext'
+import { LanguageConsumer } from '../../context/IsSpanishContext'
 import { i18n } from '../../i18n'
 import { List } from '../../components/List/List'
 
@@ -34,7 +34,7 @@ const spanishLang: typeof englishLang = {
 
 export const Contact: FC<ContactProps> = ({ className }) => (
   <LanguageConsumer>
-    {lang => {
+    {(lang) => {
       const getLabel = i18n(lang, { englishLang, spanishLang })
 
       return (

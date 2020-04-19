@@ -6,24 +6,15 @@ import { ProfessionalExperience } from '../ProfessionalExperience/ProfessionalEx
 import { Profile } from '../Profile/Profile'
 import { Skills } from '../Skills/Skills'
 
-import {
-  LanguageProvider,
-  isSpanishContextDefaultValue,
-} from '../IsSpanishContext'
+import { LanguageProvider, isSpanishContextDefaultValue } from '../../context/IsSpanishContext'
 
 import { Header } from '../../components/Header/Header'
 import { Sheet } from '../../components/Sheet/Sheet'
 
-import '../../assets/styles/reset.css'
-
-import '../../assets/fonts/OpenSans/open-sans.css'
-import '../../assets/fonts/Raleway/raleway.css'
-import '../../assets/styles/global.css'
-
 import classes from './App.module.css'
 import { ButtonHeader } from '../ButtonsHeader/ButtonsHeader'
 
-const App: FC<{}> = () => {
+const App: FC = () => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
 
   return (
@@ -32,9 +23,7 @@ const App: FC<{}> = () => {
         <Sheet
           className={classes.sheet}
           containerClass={classes.sheetContainer}
-          topContainerChildren={() => (
-            <ButtonHeader setLanguage={setLanguage} />
-          )}
+          topContainerChildren={() => <ButtonHeader setLanguage={setLanguage} />}
         >
           <Header
             personName="Daniel Ramos"
@@ -48,9 +37,7 @@ const App: FC<{}> = () => {
               <Profile className={classes.profile} />
               <div className={classes.middleSpacer} />
               <Education className={classes.education} />
-              <ProfessionalExperience
-                className={classes.professionalExperience}
-              />
+              <ProfessionalExperience className={classes.professionalExperience} />
               <Skills className={classes.skills} />
               <Contact className={classes.contact} />
             </div>
