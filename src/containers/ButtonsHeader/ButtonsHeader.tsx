@@ -1,17 +1,12 @@
 import React, { FC } from 'react'
-
 import { ButtonIconHOC } from '../../HOCs/ButtonIconHOC/ButtonIconHOC'
 import { TranslationIcon } from '../../components/icons/Translation'
 import { PrintIcon } from '../../components/icons/Print'
 import { ShareIcon } from '../../components/icons/Share'
-
 import { browserSupportsWebShareAPI } from '../../utils/web-share-api'
-
-import { i18n } from '../../i18n'
-import { LanguageConsumer, Language } from '../../context/IsSpanishContext'
-
-import classes from './ButtonsHeader.module.css'
+import { Language } from '../../context/IsSpanishContext'
 import { useTranslation } from '../../hooks/useTranslation'
+import classes from './ButtonsHeader.module.css'
 
 const TranslationButton = ButtonIconHOC(TranslationIcon)
 const PrintButton = ButtonIconHOC(PrintIcon)
@@ -32,7 +27,7 @@ function share() {
 }
 
 export const ButtonHeader: FC = () => {
-  const { t, locale, setLanguage } = useTranslation()
+  const { t, language, setLanguage } = useTranslation()
 
   return (
     <div className={classes.buttonsHeader}>
@@ -40,7 +35,7 @@ export const ButtonHeader: FC = () => {
         label={t.actions.switchLanguageBetweenSpanishOrEnglish}
         size={24}
         onClick={() =>
-          setLanguage(locale === Language.Spanish ? Language.English : Language.Spanish)
+          setLanguage(language === Language.Spanish ? Language.English : Language.Spanish)
         }
         className={classes.hideWhenPrinting}
       />

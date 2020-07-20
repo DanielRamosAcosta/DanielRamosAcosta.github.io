@@ -17,11 +17,11 @@ export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
 }) => {
   const fetchJobPhases = CreateFetchJobPhases()
   const [jobPhases, setJobPhases] = useState<JobPhase[]>(initialJobPhases)
-  const { t, locale } = useTranslation()
+  const { t, language } = useTranslation()
 
   useEffect(() => {
-    fetchJobPhases(locale).then(setJobPhases)
-  }, [locale])
+    fetchJobPhases(language).then(setJobPhases)
+  }, [language])
 
   return (
     <section className={className}>

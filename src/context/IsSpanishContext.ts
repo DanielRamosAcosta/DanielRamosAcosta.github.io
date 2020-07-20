@@ -8,7 +8,7 @@ export enum Language {
 export const isSpanishContextDefaultValue = Language.Spanish
 
 export const IsSpanishContext = React.createContext({
-  locale: isSpanishContextDefaultValue,
+  language: isSpanishContextDefaultValue,
   setLanguage: (language: Language) => {},
 })
 

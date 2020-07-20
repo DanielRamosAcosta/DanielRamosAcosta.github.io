@@ -27,7 +27,7 @@ const Index: FC<IndexProps> = ({ initialJobPhases, initialPersonalData }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <LanguageProvider value={{ locale: language, setLanguage }}>
+        <LanguageProvider value={{ language: language, setLanguage }}>
           <App
             initialJobPhases={initialJobPhases.map(deserializeJabPhase)}
             initialPersonalData={initialPersonalData}

@@ -14,7 +14,3 @@ export function i18n<T>(
     return isSpanish === Language.Spanish ? spanishLang[key] : englishLang[key]
   }
 }
-
-export function languageIs(currentLanguage: Language, expectedLanguage: Language) {
-  return currentLanguage === expectedLanguage
-}

@@ -21,11 +21,11 @@ type AppProps = {
 export const App: FC<AppProps> = ({ initialJobPhases, initialPersonalData }) => {
   const fetchPersonalData = CreateFetchPersonalData()
   const [personalData, setPersonalData] = useState<PersonalData>(initialPersonalData)
-  const { locale } = useTranslation()
+  const { language } = useTranslation()
 
   useEffect(() => {
-    fetchPersonalData(locale).then(setPersonalData)
-  }, [locale])
+    fetchPersonalData(language).then(setPersonalData)
+  }, [language])
 
   return (
     <div className={classes.container}>
