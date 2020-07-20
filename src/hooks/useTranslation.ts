@@ -5,12 +5,13 @@ import { english } from '../i18n/english'
 import { Translation } from '../i18n/translation'
 
 export const useTranslation = () => {
-  const locale = useContext(IsSpanishContext)
+  const { locale, setLanguage } = useContext(IsSpanishContext)
 
   const t: Translation = locale === Language.Spanish ? spanish : english
 
   return {
     t,
     locale,
+    setLanguage,
   }
 }

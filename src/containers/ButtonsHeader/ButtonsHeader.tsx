@@ -11,22 +11,11 @@ import { i18n } from '../../i18n'
 import { LanguageConsumer, Language } from '../../context/IsSpanishContext'
 
 import classes from './ButtonsHeader.module.css'
+import { useTranslation } from '../../hooks/useTranslation'
 
 const TranslationButton = ButtonIconHOC(TranslationIcon)
 const PrintButton = ButtonIconHOC(PrintIcon)
 const ShareButton = ButtonIconHOC(ShareIcon)
-
-const englishLang = {
-  switch_language_between_spanish_or_english: 'Switch language between spanish or english',
-  print_or_export_in_pdf: 'Print or export in PDF',
-  share: 'Share',
-}
-
-const spanishLang: typeof englishLang = {
-  switch_language_between_spanish_or_english: 'Cambiar idioma entre inglés y español',
-  print_or_export_in_pdf: 'Print or export in PDF',
-  share: 'Compartir',
-}
 
 function print() {
   window.print()
@@ -42,37 +31,33 @@ function share() {
   }
 }
 
-export const ButtonHeader: FC<{ setLanguage: Function }> = ({ setLanguage }) => (
-  <LanguageConsumer>
-    {(language) => {
-      const getLabel = i18n(language, { englishLang, spanishLang })
+export const ButtonHeader: FC = () => {
+  const { t, locale, setLanguage } = useTranslation()
 
-      return (
-        <div className={classes.buttonsHeader}>
-          <TranslationButton
-            label={getLabel('switch_language_between_spanish_or_english')}
-            size={24}
-            onClick={() =>
-              setLanguage(language === Language.Spanish ? Language.English : Language.Spanish)
-            }
-            className={classes.hideWhenPrinting}
-          />
-          <PrintButton
-            label={getLabel('switch_language_between_spanish_or_english')}
-            size={24}
-            onClick={print}
-            className={classes.hideWhenPrinting}
-          />
-          {typeof window !== 'undefined' && browserSupportsWebShareAPI(window.navigator) && (
-            <ShareButton
-              label={getLabel('share')}
-              size={24}
-              onClick={share}
-              className={classes.hideWhenPrinting}
-            />
-          )}
-        </div>
-      )
-    }}
-  </LanguageConsumer>
-)
+  return (
+    <div className={classes.buttonsHeader}>
+      <TranslationButton
+        label={t.actions.switchLanguageBetweenSpanishOrEnglish}
+        size={24}
+        onClick={() =>
+          setLanguage(locale === Language.Spanish ? Language.English : Language.Spanish)
+        }
+        className={classes.hideWhenPrinting}
+      />
+      <PrintButton
+        label={t.actions.printOrExportInPdf}
+        size={24}
+        onClick={print}
+        className={classes.hideWhenPrinting}
+      />
+      {typeof window !== 'undefined' && browserSupportsWebShareAPI(window.navigator) && (
+        <ShareButton
+          label={t.actions.share}
+          size={24}
+          onClick={share}
+          className={classes.hideWhenPrinting}
+        />
+      )}
+    </div>
+  )
+}

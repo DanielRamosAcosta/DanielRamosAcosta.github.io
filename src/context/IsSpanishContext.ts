@@ -7,7 +7,10 @@ export enum Language {
 
 export const isSpanishContextDefaultValue = Language.Spanish
 
-export const IsSpanishContext = React.createContext(isSpanishContextDefaultValue)
+export const IsSpanishContext = React.createContext({
+  locale: isSpanishContextDefaultValue,
+  setLanguage: (language: Language) => {},
+})
 
 export const LanguageProvider = IsSpanishContext.Provider
 export const LanguageConsumer = IsSpanishContext.Consumer

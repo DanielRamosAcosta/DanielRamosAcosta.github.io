@@ -1,20 +1,26 @@
 import React, { FC, useEffect, useState } from 'react'
-import { JobPhase, JobPhasesRepositoryHttp } from '../../repository/http/JobPhasesRepositoryHttp'
+import { CreateFetchJobPhases } from '../../repository/http/CreateFetchJobPhases'
 import { JobPhase as JobPhaseComponent } from '../../components/JobPhase/JobPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { Formatted } from '../../components/Formatted/Formatted'
 import { useTranslation } from '../../hooks/useTranslation'
+import { JobPhase } from '../../models/JobPhase'
 
 type ProfessionalExperienceProps = {
   className?: string
+  initialJobPhases: JobPhase[]
 }
 
-export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({ className }) => {
-  const [jobPhases, setJobPhases] = useState<JobPhase[]>([])
+export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
+  className,
+  initialJobPhases,
+}) => {
+  const fetchJobPhases = CreateFetchJobPhases()
+  const [jobPhases, setJobPhases] = useState<JobPhase[]>(initialJobPhases)
   const { t, locale } = useTranslation()
 
   useEffect(() => {
-    new JobPhasesRepositoryHttp().getAll(locale).then(setJobPhases)
+    fetchJobPhases(locale).then(setJobPhases)
   }, [locale])
 
   return (
@@ -22,13 +28,13 @@ export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({ classN
       <UnderlinedTitle>{t.professionalExperience}</UnderlinedTitle>
       {jobPhases.map((jobPhase) => (
         <JobPhaseComponent
-          key={jobPhase.getCompanyName()}
-          jobName={jobPhase.getJobName()}
-          companyName={jobPhase.getCompanyName()}
-          startDate={jobPhase.getStartDate()}
-          endDate={jobPhase.getEndDate()}
+          key={jobPhase.companyName}
+          jobName={jobPhase.jobName}
+          companyName={jobPhase.companyName}
+          startDate={jobPhase.startDate}
+          endDate={jobPhase.endDate}
         >
-          <Formatted html={jobPhase.getDescriptionHTML()} />
+          <Formatted html={jobPhase.descriptionHTML} />
         </JobPhaseComponent>
       ))}
     </section>

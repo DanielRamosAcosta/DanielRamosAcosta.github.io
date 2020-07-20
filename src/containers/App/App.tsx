@@ -1,51 +1,60 @@
-import React, { FC, useState } from 'react'
-
+import React, { FC, useEffect, useState } from 'react'
 import { Contact } from '../Contact/Contact'
 import { Education } from '../Education/Education'
 import { ProfessionalExperience } from '../ProfessionalExperience/ProfessionalExperience'
 import { Profile } from '../Profile/Profile'
 import { Skills } from '../Skills/Skills'
-
-import { LanguageProvider, isSpanishContextDefaultValue } from '../../context/IsSpanishContext'
-
 import { Header } from '../../components/Header/Header'
 import { Sheet } from '../../components/Sheet/Sheet'
-
-import classes from './App.module.css'
 import { ButtonHeader } from '../ButtonsHeader/ButtonsHeader'
+import { JobPhase } from '../../models/JobPhase'
+import { PersonalData } from '../../models/PersonalData'
+import { useTranslation } from '../../hooks/useTranslation'
+import { CreateFetchPersonalData } from '../../repository/http/CreateFetchPersonalData'
+import classes from './App.module.css'
 
-const App: FC = () => {
-  const [language, setLanguage] = useState(isSpanishContextDefaultValue)
-
-  return (
-    <LanguageProvider value={language}>
-      <div className={classes.container}>
-        <Sheet
-          className={classes.sheet}
-          containerClass={classes.sheetContainer}
-          topContainerChildren={() => <ButtonHeader setLanguage={setLanguage} />}
-        >
-          <Header
-            personName="Daniel Ramos"
-            role="Lead Software Developer"
-            className={classes.header}
-          />
-          <div>
-            <div className={classes.hspacer} />
-            <div className={classes.curriculumContainer}>
-              <div className={classes.vspacer} />
-              <Profile className={classes.profile} />
-              <div className={classes.middleSpacer} />
-              <Education className={classes.education} />
-              <ProfessionalExperience className={classes.professionalExperience} />
-              <Skills className={classes.skills} />
-              <Contact className={classes.contact} />
-            </div>
-          </div>
-        </Sheet>
-      </div>
-    </LanguageProvider>
-  )
+type AppProps = {
+  initialJobPhases: JobPhase[]
+  initialPersonalData: PersonalData
 }
 
-export default App
+export const App: FC<AppProps> = ({ initialJobPhases, initialPersonalData }) => {
+  const fetchPersonalData = CreateFetchPersonalData()
+  const [personalData, setPersonalData] = useState<PersonalData>(initialPersonalData)
+  const { locale } = useTranslation()
+
+  useEffect(() => {
+    fetchPersonalData(locale).then(setPersonalData)
+  }, [locale])
+
+  return (
+    <div className={classes.container}>
+      <Sheet
+        className={classes.sheet}
+        containerClass={classes.sheetContainer}
+        topContainerChildren={() => <ButtonHeader />}
+      >
+        <Header
+          personName="Daniel Ramos"
+          role="Lead Software Developer"
+          className={classes.header}
+        />
+        <div>
+          <div className={classes.hspacer} />
+          <div className={classes.curriculumContainer}>
+            <div className={classes.vspacer} />
+            <Profile className={classes.profile} profile={personalData.profile} />
+            <div className={classes.middleSpacer} />
+            <Education className={classes.education} />
+            <ProfessionalExperience
+              className={classes.professionalExperience}
+              initialJobPhases={initialJobPhases}
+            />
+            <Skills className={classes.skills} />
+            <Contact className={classes.contact} />
+          </div>
+        </div>
+      </Sheet>
+    </div>
+  )
+}

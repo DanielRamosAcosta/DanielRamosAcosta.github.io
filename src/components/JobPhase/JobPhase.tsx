@@ -1,8 +1,6 @@
 import React, { FC } from 'react'
-
+import { useTranslation } from '../../hooks/useTranslation'
 import classes from './JobPhase.module.css'
-import { LanguageConsumer } from '../../context/IsSpanishContext'
-import { i18n } from '../../i18n'
 
 type JobPhaseProps = {
   jobName: string
@@ -11,38 +9,26 @@ type JobPhaseProps = {
   endDate?: Date | null
 }
 
-const englishLang = {
-  today: 'today',
-}
-
-const spanishLang: typeof englishLang = {
-  today: 'actualidad',
-}
-
 export const JobPhase: FC<JobPhaseProps> = ({
   jobName,
   companyName,
   startDate,
   endDate,
   children,
-}) => (
-  <LanguageConsumer>
-    {(language) => {
-      const getLabel = i18n(language, { englishLang, spanishLang })
+}) => {
+  const { t } = useTranslation()
 
-      return (
-        <div>
-          <p className={classes.jobName}>{jobName}</p>
-          <p className={classes.companyAndDates}>
-            <span>{companyName}</span>
-            <span className={classes.spacer}>|</span>
-            <span>
-              {startDate.getFullYear()} - {endDate ? endDate.getFullYear() : getLabel('today')}
-            </span>
-          </p>
-          <div className={classes.content}>{children}</div>
-        </div>
-      )
-    }}
-  </LanguageConsumer>
-)
+  return (
+    <div>
+      <p className={classes.jobName}>{jobName}</p>
+      <p className={classes.companyAndDates}>
+        <span>{companyName}</span>
+        <span className={classes.spacer}>|</span>
+        <span>
+          {startDate.getFullYear()} - {endDate ? endDate.getFullYear() : t.today}
+        </span>
+      </p>
+      <div className={classes.content}>{children}</div>
+    </div>
+  )
+}
