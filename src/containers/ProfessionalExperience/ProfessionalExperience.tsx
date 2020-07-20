@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from 'react'
-import { CreateFetchJobPhases } from '../../repository/http/CreateFetchJobPhases'
+import React, { FC } from 'react'
 import { JobPhase as JobPhaseComponent } from '../../components/JobPhase/JobPhase'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
 import { Formatted } from '../../components/Formatted/Formatted'
 import { useTranslation } from '../../hooks/useTranslation'
 import { JobPhase } from '../../models/JobPhase'
+import { useJobPhases } from '../../hooks/queries/useJobPhases'
 
 type ProfessionalExperienceProps = {
   className?: string
@@ -15,13 +15,8 @@ export const ProfessionalExperience: FC<ProfessionalExperienceProps> = ({
   className,
   initialJobPhases,
 }) => {
-  const fetchJobPhases = CreateFetchJobPhases()
-  const [jobPhases, setJobPhases] = useState<JobPhase[]>(initialJobPhases)
   const { t, language } = useTranslation()
-
-  useEffect(() => {
-    fetchJobPhases(language).then(setJobPhases)
-  }, [language])
+  const { jobPhases } = useJobPhases(initialJobPhases, language)
 
   return (
     <section className={className}>

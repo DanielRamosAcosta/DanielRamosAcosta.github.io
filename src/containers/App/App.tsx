@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react'
+import useSWR from 'swr'
 import { Contact } from '../Contact/Contact'
 import { Education } from '../Education/Education'
 import { ProfessionalExperience } from '../ProfessionalExperience/ProfessionalExperience'
@@ -12,6 +13,8 @@ import { PersonalData } from '../../models/PersonalData'
 import { useTranslation } from '../../hooks/useTranslation'
 import { CreateFetchPersonalData } from '../../repository/http/CreateFetchPersonalData'
 import classes from './App.module.css'
+import { Language } from '../../context/IsSpanishContext'
+import { usePersonalData } from '../../hooks/queries/usePersonalData'
 
 type AppProps = {
   initialJobPhases: JobPhase[]
@@ -19,13 +22,8 @@ type AppProps = {
 }
 
 export const App: FC<AppProps> = ({ initialJobPhases, initialPersonalData }) => {
-  const fetchPersonalData = CreateFetchPersonalData()
-  const [personalData, setPersonalData] = useState<PersonalData>(initialPersonalData)
   const { language } = useTranslation()
-
-  useEffect(() => {
-    fetchPersonalData(language).then(setPersonalData)
-  }, [language])
+  const { personalData } = usePersonalData(initialPersonalData, language)
 
   return (
     <div className={classes.container}>

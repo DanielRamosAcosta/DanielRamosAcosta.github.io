@@ -35,7 +35,12 @@ const request = (locale: Locale): Promise<Item> =>
   ).then((response) => response.json())
 
 export const CreateFetchPersonalData = () => async (language: Language): Promise<PersonalData> => {
-  const rootObjectPromise = await request(localeMap[language])
+  const localeMapElement = localeMap[language]
+  if (!localeMapElement) {
+    throw new Error('Missing mandatory arguemtn')
+  }
+  const rootObjectPromise = await request(localeMapElement)
+  console.log('[DD] Fetching', language)
 
   return {
     professionalSkills: rootObjectPromise.fields.professionalSkills,
