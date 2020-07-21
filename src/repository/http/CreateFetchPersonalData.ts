@@ -12,6 +12,7 @@ enum Locale {
 
 type Item = {
   fields: {
+    description: string
     professionalSkills: string[]
     profile: Document
     technicalSkills: string[]
@@ -43,6 +44,7 @@ export const CreateFetchPersonalData = () => async (language: Language): Promise
   console.log('[DD] Fetching', language)
 
   return {
+    description: rootObjectPromise.fields.description,
     professionalSkills: rootObjectPromise.fields.professionalSkills,
     profile: documentToHtmlString(rootObjectPromise.fields.profile),
     technicalSkills: rootObjectPromise.fields.technicalSkills,

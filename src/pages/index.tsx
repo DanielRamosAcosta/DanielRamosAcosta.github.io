@@ -21,26 +21,34 @@ const Index: FC<IndexProps> = ({ initialJobPhases, initialPersonalData }) => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
 
   return (
-    <>
+    <html lang="es">
       <Head>
         <title>Daniel Ramos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={initialPersonalData.description} />
+        <link
+          rel="preload"
+          href="assets/fonts/OpenSans/OpenSans-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </Head>
-      <div>
+      <body>
         <LanguageProvider value={{ language: language, setLanguage }}>
           <App
             initialJobPhases={initialJobPhases.map(deserializeJabPhase)}
             initialPersonalData={initialPersonalData}
           />
         </LanguageProvider>
-      </div>
-    </>
+      </body>
+    </html>
   )
 }
 
 export default Index
 
-export const getStaticProps: GetStaticProps<IndexProps> = async (context) => {
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const fetchJobPhases = CreateFetchJobPhases()
   const fetchPersonalData = CreateFetchPersonalData()
 
