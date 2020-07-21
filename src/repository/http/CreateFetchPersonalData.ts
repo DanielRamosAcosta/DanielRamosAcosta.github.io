@@ -40,8 +40,8 @@ export const CreateFetchPersonalData = () => async (language: Language): Promise
   if (!localeMapElement) {
     throw new Error('Missing mandatory arguemtn')
   }
+
   const rootObjectPromise = await request(localeMapElement)
-  console.log('[DD] Fetching', language)
 
   return {
     description: rootObjectPromise.fields.description,
