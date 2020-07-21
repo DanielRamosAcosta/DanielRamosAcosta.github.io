@@ -25,7 +25,7 @@
     "start": "next start",
     "export": "next export",
     "pdf": "node scripts/pdf.js",
-    "deploy": "gh-pages -d build -b master"
+    "deploy": "gh-pages -t -f -d out -b master"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -26,13 +26,6 @@ const Index: FC<IndexProps> = ({ initialJobPhases, initialPersonalData }) => {
         <title>Daniel Ramos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={initialPersonalData.description} />
-        <link
-          rel="preload"
-          href="assets/fonts/OpenSans/OpenSans-Bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
       </Head>
       <body>
         <LanguageProvider value={{ language: language, setLanguage }}>
