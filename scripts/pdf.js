@@ -4,9 +4,10 @@ const express = require('express')
 
 console.log('Staring PDF export...')
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const app = express()
 
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, '../out')))
 
 const server = app.listen(3000)
 
@@ -15,8 +16,9 @@ async function exportWithLanguage(browser, language) {
 
   await page.goto('http://localhost:3000')
 
-  if (language === 'es-ES') {
+  if (language === 'en-US') {
     await page.click('button')
+    await sleep(1000)
   }
 
   await page.pdf({
@@ -44,6 +46,7 @@ main()
   .then(() => {
     console.log('Done!')
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err)
+    process.exit(1)
   })
