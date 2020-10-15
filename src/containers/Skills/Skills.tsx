@@ -3,15 +3,14 @@ import React, { FC } from 'react'
 import { SkillList } from '../../components/SkillList/SkillList'
 import { SkillListItem } from '../../components/SkillListItem/SkillListItem'
 import { UnderlinedTitle } from '../../components/UnderlinedTitle/UnderlinedTitle'
-import { LanguageConsumer } from '../../context/IsSpanishContext'
-import { i18n } from '../../i18n'
 import { useTranslation } from '../../hooks/useTranslation'
 
 type SkillsProps = {
   className?: string
+  skills: string[]
 }
 
-export const Skills: FC<SkillsProps> = ({ className }) => {
+export const Skills: FC<SkillsProps> = ({ className, skills }) => {
   const { t } = useTranslation()
 
   return (
@@ -24,15 +23,9 @@ export const Skills: FC<SkillsProps> = ({ className }) => {
         <SkillListItem>Teamwork</SkillListItem>
       </SkillList>
       <SkillList title="Technical">
-        <SkillListItem>Javacript</SkillListItem>
-        <SkillListItem>Scala</SkillListItem>
-        <SkillListItem>Go</SkillListItem>
-        <SkillListItem>C#</SkillListItem>
-        <SkillListItem>Elixir</SkillListItem>
-        <SkillListItem>Functional Programming</SkillListItem>
-        <SkillListItem>Docker</SkillListItem>
-        <SkillListItem>Kubernetes</SkillListItem>
-        <SkillListItem>Tensorflow</SkillListItem>
+        {skills.map((skill) => (
+          <SkillListItem>{skill}</SkillListItem>
+        ))}
       </SkillList>
     </section>
   )
