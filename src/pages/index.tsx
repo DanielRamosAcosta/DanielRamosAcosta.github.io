@@ -8,7 +8,7 @@ import {
   Language,
   LanguageProvider,
 } from '../context/IsSpanishContext'
-import { deserializeJabPhase, JabPhaseSerialized, serializeJabPhase } from '../models/JobPhase'
+import { deserializeJobPhase, JabPhaseSerialized, serializeJobPhase } from '../models/JobPhase'
 import { CreateFetchPersonalData } from '../repository/http/CreateFetchPersonalData'
 import { PersonalData } from '../models/PersonalData'
 
@@ -21,21 +21,19 @@ const Index: FC<IndexProps> = ({ initialJobPhases, initialPersonalData }) => {
   const [language, setLanguage] = useState(isSpanishContextDefaultValue)
 
   return (
-    <html lang="es">
+    <>
       <Head>
         <title>Daniel Ramos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={initialPersonalData.description} />
       </Head>
-      <body>
-        <LanguageProvider value={{ language: language, setLanguage }}>
-          <App
-            initialJobPhases={initialJobPhases.map(deserializeJabPhase)}
-            initialPersonalData={initialPersonalData}
-          />
-        </LanguageProvider>
-      </body>
-    </html>
+      <LanguageProvider value={{ language: language, setLanguage }}>
+        <App
+          initialJobPhases={initialJobPhases.map(deserializeJobPhase)}
+          initialPersonalData={initialPersonalData}
+        />
+      </LanguageProvider>
+    </>
   )
 }
 
@@ -50,7 +48,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 
   return {
     props: {
-      initialJobPhases: initialJobPhases.map(serializeJabPhase),
+      initialJobPhases: initialJobPhases.map(serializeJobPhase),
       initialPersonalData,
     },
   }

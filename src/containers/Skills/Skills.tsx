@@ -7,24 +7,24 @@ import { useTranslation } from '../../hooks/useTranslation'
 
 type SkillsProps = {
   className?: string
-  skills: string[]
+  technicalSkills: string[]
+  professionalSkills: string[]
 }
 
-export const Skills: FC<SkillsProps> = ({ className, skills }) => {
+export const Skills: FC<SkillsProps> = ({ className, professionalSkills, technicalSkills }) => {
   const { t } = useTranslation()
 
   return (
     <section className={className}>
       <UnderlinedTitle>{t.skills.title}</UnderlinedTitle>
       <SkillList title="Professional">
-        <SkillListItem>Web Development</SkillListItem>
-        <SkillListItem>Software Engineering</SkillListItem>
-        <SkillListItem>Code Trainer</SkillListItem>
-        <SkillListItem>Teamwork</SkillListItem>
+        {professionalSkills.map((skill => (
+          <SkillListItem key={skill}>{skill}</SkillListItem>
+        )))}
       </SkillList>
       <SkillList title="Technical">
-        {skills.map((skill) => (
-          <SkillListItem>{skill}</SkillListItem>
+        {technicalSkills.map((skill) => (
+          <SkillListItem key={skill}>{skill}</SkillListItem>
         ))}
       </SkillList>
     </section>

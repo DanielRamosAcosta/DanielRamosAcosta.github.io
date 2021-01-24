@@ -14,7 +14,7 @@ export type JabPhaseSerialized = {
   readonly descriptionHTML: string
 }
 
-export const serializeJabPhase = (jobPhase: JobPhase): JabPhaseSerialized => {
+export const serializeJobPhase = (jobPhase: JobPhase): JabPhaseSerialized => {
   return {
     jobName: jobPhase.jobName,
     companyName: jobPhase.companyName,
@@ -24,7 +24,7 @@ export const serializeJabPhase = (jobPhase: JobPhase): JabPhaseSerialized => {
   }
 }
 
-export const deserializeJabPhase = (jobPhase: JabPhaseSerialized): JobPhase => ({
+export const deserializeJobPhase = (jobPhase: JabPhaseSerialized): JobPhase => ({
   jobName: jobPhase.jobName,
   companyName: jobPhase.companyName,
   startDate: new Date(jobPhase.startDate),

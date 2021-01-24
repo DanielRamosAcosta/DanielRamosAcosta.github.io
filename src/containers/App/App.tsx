@@ -48,7 +48,11 @@ export const App: FC<AppProps> = ({ initialJobPhases, initialPersonalData }) => 
               className={classes.professionalExperience}
               initialJobPhases={initialJobPhases}
             />
-            <Skills className={classes.skills} skills={personalData.technicalSkills} />
+            <Skills
+              className={classes.skills}
+              technicalSkills={personalData.technicalSkills}
+              professionalSkills={personalData.professionalSkills}
+            />
             <Contact className={classes.contact} />
           </div>
         </div>
